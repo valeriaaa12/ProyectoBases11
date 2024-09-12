@@ -4,6 +4,9 @@
  */
 package proyectobases11;
 import java.awt.Color;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -11,9 +14,10 @@ import java.awt.Color;
  */
 public class Main extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Main
-     */
+    
+    public ConnectionORCL c;
+    
+    
     public Main() {
         initComponents();
     }
@@ -206,6 +210,9 @@ public class Main extends javax.swing.JFrame {
 
         crear_r.setBackground(new java.awt.Color(68, 68, 68));
         crear_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crear_rMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 crear_rMouseEntered(evt);
             }
@@ -218,8 +225,6 @@ public class Main extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Crear ");
-
-        jLabel34.setIcon(new javax.swing.ImageIcon("C:\\Users\\carlo\\Documents\\NetBeansProjects\\ProyectoBases11\\icons\\circulo-plus.png")); // NOI18N
 
         javax.swing.GroupLayout crear_rLayout = new javax.swing.GroupLayout(crear_r);
         crear_r.setLayout(crear_rLayout);
@@ -274,7 +279,7 @@ public class Main extends javax.swing.JFrame {
             modificar_rLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificar_rLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(modificar_rLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(modificar_rLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(jLabel35))
                 .addContainerGap())
@@ -367,8 +372,8 @@ public class Main extends javax.swing.JFrame {
         crear_bLayout.setVerticalGroup(
             crear_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crear_bLayout.createSequentialGroup()
-                .addGap(0, 13, Short.MAX_VALUE)
-                .addGroup(crear_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(0, 11, Short.MAX_VALUE)
+                .addGroup(crear_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
                     .addComponent(jLabel37)))
         );
@@ -403,13 +408,13 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         modificar_bLayout.setVerticalGroup(
             modificar_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificar_bLayout.createSequentialGroup()
                 .addGap(0, 6, Short.MAX_VALUE)
-                .addGroup(modificar_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(modificar_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11)
                     .addComponent(jLabel38)))
         );
@@ -450,7 +455,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(eliminar_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39)
                     .addComponent(jLabel12))
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -495,7 +500,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(i_productosLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel13)))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         c_cliente.setBackground(new java.awt.Color(68, 68, 68));
@@ -523,7 +528,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         c_clienteLayout.setVerticalGroup(
             c_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -535,7 +540,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(c_clienteLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel15)))
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         h_ventas.setBackground(new java.awt.Color(68, 68, 68));
@@ -612,7 +617,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_vendidoTiendaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel21))
         );
 
@@ -644,14 +649,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(p_vendidopaisLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jLabel22)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         p_vendidopaisLayout.setVerticalGroup(
             p_vendidopaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_vendidopaisLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel22)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel23))
         );
 
@@ -690,7 +695,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, t_ventasyearLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel25))
         );
 
@@ -734,7 +739,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, t_cocapepsiLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel28)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel30))
         );
 
@@ -773,7 +778,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, top_ventasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel31)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel32))
         );
 
@@ -813,8 +818,6 @@ public class Main extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel29))
         );
-
-        jLabel33.setIcon(new javax.swing.ImageIcon("C:\\Users\\carlo\\Documents\\NetBeansProjects\\ProyectoBases11\\icons\\store-front.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -864,8 +867,8 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(p_vendidopais, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(t_cocapepsi, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                            .addComponent(top_ventas, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
+                            .addComponent(t_cocapepsi, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                            .addComponent(top_ventas, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGap(158, 158, 158)
@@ -1119,6 +1122,18 @@ public class Main extends javax.swing.JFrame {
     private void top_ventasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_top_ventasMouseExited
         top_ventas.setBackground(new Color(68, 68, 68));
     }//GEN-LAST:event_top_ventasMouseExited
+
+    private void crear_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_rMouseClicked
+        try {
+            // TODO add your handling code here:
+            c = new ConnectionORCL();
+            c.conexion("megatwink69");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_crear_rMouseClicked
 
     /**
      * @param args the command line arguments
