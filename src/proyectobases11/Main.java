@@ -249,6 +249,9 @@ public class Main extends javax.swing.JFrame {
 
         modificar_r.setBackground(new java.awt.Color(68, 68, 68));
         modificar_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                modificar_rMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 modificar_rMouseEntered(evt);
             }
@@ -1126,14 +1129,27 @@ public class Main extends javax.swing.JFrame {
     private void crear_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_rMouseClicked
         try {
             // TODO add your handling code here:
-            c = new ConnectionORCL();
+            c = new ConnectionORCL("megatwink69");
             c.conexion("megatwink69");
+            
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("lmao");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("xd");
+        }
+    }//GEN-LAST:event_crear_rMouseClicked
+
+    private void modificar_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar_rMouseClicked
+        try {
+            // TODO add your handling code here:
+            c.insertIntoTabla(40, "aaa", "bbb");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_crear_rMouseClicked
+        
+    }//GEN-LAST:event_modificar_rMouseClicked
 
     /**
      * @param args the command line arguments
