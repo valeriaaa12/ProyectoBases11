@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyectobases11;
+
 import java.awt.Color;
 
 /**
@@ -156,6 +157,105 @@ public class Main extends javax.swing.JFrame {
         jLabel157 = new javax.swing.JLabel();
         jLabel158 = new javax.swing.JLabel();
         updcb = new javax.swing.JComboBox<>();
+        CrearUser = new javax.swing.JDialog();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel150 = new javax.swing.JLabel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel152 = new javax.swing.JLabel();
+        jLabel153 = new javax.swing.JLabel();
+        upc4 = new javax.swing.JTextField();
+        embalaje4 = new javax.swing.JTextField();
+        size3 = new javax.swing.JTextField();
+        jPanel21 = new javax.swing.JPanel();
+        jLabel160 = new javax.swing.JLabel();
+        jLabel161 = new javax.swing.JLabel();
+        ModUser = new javax.swing.JDialog();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel151 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel154 = new javax.swing.JLabel();
+        jLabel155 = new javax.swing.JLabel();
+        upc5 = new javax.swing.JTextField();
+        embalaje5 = new javax.swing.JTextField();
+        size4 = new javax.swing.JTextField();
+        jPanel24 = new javax.swing.JPanel();
+        jLabel162 = new javax.swing.JLabel();
+        jLabel163 = new javax.swing.JLabel();
+        DelUser = new javax.swing.JDialog();
+        jPanel25 = new javax.swing.JPanel();
+        jLabel156 = new javax.swing.JLabel();
+        jPanel26 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel165 = new javax.swing.JLabel();
+        jLabel166 = new javax.swing.JLabel();
+        userscb = new javax.swing.JComboBox<>();
+        GestionarClientes = new javax.swing.JDialog();
+        jPanel28 = new javax.swing.JPanel();
+        jPanel29 = new javax.swing.JPanel();
+        jLabel159 = new javax.swing.JLabel();
+        addCliente = new javax.swing.JPanel();
+        jLabel168 = new javax.swing.JLabel();
+        ModCliente = new javax.swing.JPanel();
+        jLabel167 = new javax.swing.JLabel();
+        DelCliente = new javax.swing.JPanel();
+        jLabel170 = new javax.swing.JLabel();
+        jLabel169 = new javax.swing.JLabel();
+        AddC = new javax.swing.JDialog();
+        jPanel30 = new javax.swing.JPanel();
+        jPanel31 = new javax.swing.JPanel();
+        jLabel164 = new javax.swing.JLabel();
+        addCliente1 = new javax.swing.JPanel();
+        jLabel172 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel173 = new javax.swing.JLabel();
+        jLabel174 = new javax.swing.JLabel();
+        namec = new javax.swing.JTextField();
+        idc1 = new javax.swing.JTextField();
+        namec1 = new javax.swing.JTextField();
+        ModC = new javax.swing.JDialog();
+        jPanel32 = new javax.swing.JPanel();
+        jPanel33 = new javax.swing.JPanel();
+        jLabel175 = new javax.swing.JLabel();
+        addCliente2 = new javax.swing.JPanel();
+        jLabel176 = new javax.swing.JLabel();
+        jLabel177 = new javax.swing.JLabel();
+        jLabel178 = new javax.swing.JLabel();
+        jLabel179 = new javax.swing.JLabel();
+        namec2 = new javax.swing.JTextField();
+        idc2 = new javax.swing.JTextField();
+        namec3 = new javax.swing.JTextField();
+        DelC = new javax.swing.JDialog();
+        jPanel34 = new javax.swing.JPanel();
+        jPanel35 = new javax.swing.JPanel();
+        jLabel180 = new javax.swing.JLabel();
+        addCliente3 = new javax.swing.JPanel();
+        jLabel181 = new javax.swing.JLabel();
+        jLabel183 = new javax.swing.JLabel();
+        idc_cb = new javax.swing.JComboBox<>();
+        GestionarP = new javax.swing.JDialog();
+        jPanel36 = new javax.swing.JPanel();
+        jPanel37 = new javax.swing.JPanel();
+        jLabel182 = new javax.swing.JLabel();
+        addCliente4 = new javax.swing.JPanel();
+        jLabel184 = new javax.swing.JLabel();
+        ModCliente1 = new javax.swing.JPanel();
+        jLabel185 = new javax.swing.JLabel();
+        DelCliente1 = new javax.swing.JPanel();
+        jLabel186 = new javax.swing.JLabel();
+        AddP = new javax.swing.JDialog();
+        jPanel38 = new javax.swing.JPanel();
+        jPanel39 = new javax.swing.JPanel();
+        jLabel187 = new javax.swing.JLabel();
+        addCliente5 = new javax.swing.JPanel();
+        jLabel188 = new javax.swing.JLabel();
+        jLabel189 = new javax.swing.JLabel();
+        jLabel190 = new javax.swing.JLabel();
+        jLabel191 = new javax.swing.JLabel();
+        namec4 = new javax.swing.JTextField();
+        idc3 = new javax.swing.JTextField();
+        namec5 = new javax.swing.JTextField();
+        ModP = new javax.swing.JDialog();
+        DelP = new javax.swing.JDialog();
         jPanel2 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -1247,10 +1347,10 @@ public class Main extends javax.swing.JFrame {
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
-        jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 70));
+        jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 770, 80));
 
         jLabel132.setBackground(new java.awt.Color(255, 255, 255));
         jLabel132.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
@@ -1339,9 +1439,7 @@ public class Main extends javax.swing.JFrame {
         );
         CrearProdLayout.setVerticalGroup(
             CrearProdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CrearProdLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
 
         jPanel13.setBackground(new java.awt.Color(51, 51, 51));
@@ -1530,6 +1628,872 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jPanel19.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel150.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel150.setText("Crear Usuario");
+        jPanel19.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
+
+        jPanel20.setBackground(new java.awt.Color(68, 68, 68));
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        jPanel19.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 770, 80));
+
+        jLabel152.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel152.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel152.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel152.setText("Contraseña");
+        jPanel19.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        jLabel153.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel153.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel153.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel153.setText("Rol");
+        jPanel19.add(jLabel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        jPanel19.add(upc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 210, -1));
+        jPanel19.add(embalaje4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 210, -1));
+        jPanel19.add(size3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 210, -1));
+
+        jPanel21.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel160.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel160.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel160.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel160.setText("Crear Usuario");
+
+        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
+        jPanel21.setLayout(jPanel21Layout);
+        jPanel21Layout.setHorizontalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
+                .addContainerGap(54, Short.MAX_VALUE)
+                .addComponent(jLabel160, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
+        );
+        jPanel21Layout.setVerticalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel160)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel19.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 280, 50));
+
+        jLabel161.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel161.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel161.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel161.setText("Username");
+        jPanel19.add(jLabel161, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        javax.swing.GroupLayout CrearUserLayout = new javax.swing.GroupLayout(CrearUser.getContentPane());
+        CrearUser.getContentPane().setLayout(CrearUserLayout);
+        CrearUserLayout.setHorizontalGroup(
+            CrearUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 529, Short.MAX_VALUE)
+        );
+        CrearUserLayout.setVerticalGroup(
+            CrearUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+        );
+
+        jPanel22.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel151.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel151.setText("Modificar Usuario");
+        jPanel22.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
+
+        jPanel23.setBackground(new java.awt.Color(68, 68, 68));
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        jPanel22.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 770, 80));
+
+        jLabel154.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel154.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel154.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel154.setText("Contraseña");
+        jPanel22.add(jLabel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        jLabel155.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel155.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel155.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel155.setText("Rol");
+        jPanel22.add(jLabel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        jPanel22.add(upc5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 210, -1));
+        jPanel22.add(embalaje5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 210, -1));
+        jPanel22.add(size4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 210, -1));
+
+        jPanel24.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel162.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel162.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel162.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel162.setText("Modificar Usuario");
+
+        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
+        jPanel24.setLayout(jPanel24Layout);
+        jPanel24Layout.setHorizontalGroup(
+            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel24Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel162)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+        jPanel24Layout.setVerticalGroup(
+            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel24Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel162)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel22.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 280, 50));
+
+        jLabel163.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel163.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel163.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel163.setText("Username");
+        jPanel22.add(jLabel163, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        javax.swing.GroupLayout ModUserLayout = new javax.swing.GroupLayout(ModUser.getContentPane());
+        ModUser.getContentPane().setLayout(ModUserLayout);
+        ModUserLayout.setHorizontalGroup(
+            ModUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, 529, Short.MAX_VALUE)
+        );
+        ModUserLayout.setVerticalGroup(
+            ModUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModUserLayout.createSequentialGroup()
+                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel25.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel156.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel156.setText("Eliminar Usuario");
+        jPanel25.add(jLabel156, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
+
+        jPanel26.setBackground(new java.awt.Color(68, 68, 68));
+
+        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
+        jPanel26.setLayout(jPanel26Layout);
+        jPanel26Layout.setHorizontalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel26Layout.setVerticalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        jPanel25.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 770, 80));
+
+        jPanel27.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel165.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel165.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel165.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel165.setText("Eliminar Usuario");
+
+        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
+        jPanel27.setLayout(jPanel27Layout);
+        jPanel27Layout.setHorizontalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel165)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        jPanel27Layout.setVerticalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel165)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel25.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 280, 50));
+
+        jLabel166.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel166.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel166.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel166.setText("Username");
+        jPanel25.add(jLabel166, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+
+        jPanel25.add(userscb, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 210, -1));
+
+        javax.swing.GroupLayout DelUserLayout = new javax.swing.GroupLayout(DelUser.getContentPane());
+        DelUser.getContentPane().setLayout(DelUserLayout);
+        DelUserLayout.setHorizontalGroup(
+            DelUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, 529, Short.MAX_VALUE)
+        );
+        DelUserLayout.setVerticalGroup(
+            DelUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DelUserLayout.createSequentialGroup()
+                .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel28.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel29.setBackground(new java.awt.Color(68, 68, 68));
+
+        jLabel159.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel159.setText("Gestión de Clientes");
+
+        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
+        jPanel29.setLayout(jPanel29Layout);
+        jPanel29Layout.setHorizontalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel159, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(522, Short.MAX_VALUE))
+        );
+        jPanel29Layout.setVerticalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(jLabel159)
+                .addGap(17, 17, 17))
+        );
+
+        jPanel28.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 760, 80));
+
+        addCliente.setBackground(new java.awt.Color(68, 68, 68));
+        addCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addClienteMouseClicked(evt);
+            }
+        });
+
+        jLabel168.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel168.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel168.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel168.setText("Agregar Cliente");
+
+        javax.swing.GroupLayout addClienteLayout = new javax.swing.GroupLayout(addCliente);
+        addCliente.setLayout(addClienteLayout);
+        addClienteLayout.setHorizontalGroup(
+            addClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addClienteLayout.createSequentialGroup()
+                .addContainerGap(59, Short.MAX_VALUE)
+                .addComponent(jLabel168)
+                .addGap(56, 56, 56))
+        );
+        addClienteLayout.setVerticalGroup(
+            addClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addClienteLayout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addComponent(jLabel168)
+                .addContainerGap())
+        );
+
+        jPanel28.add(addCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 300, 50));
+
+        ModCliente.setBackground(new java.awt.Color(68, 68, 68));
+        ModCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ModCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ModClienteMouseClicked(evt);
+            }
+        });
+
+        jLabel167.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel167.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel167.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel167.setText("Modificar Cliente");
+
+        javax.swing.GroupLayout ModClienteLayout = new javax.swing.GroupLayout(ModCliente);
+        ModCliente.setLayout(ModClienteLayout);
+        ModClienteLayout.setHorizontalGroup(
+            ModClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModClienteLayout.createSequentialGroup()
+                .addContainerGap(52, Short.MAX_VALUE)
+                .addComponent(jLabel167)
+                .addGap(50, 50, 50))
+        );
+        ModClienteLayout.setVerticalGroup(
+            ModClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel167)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        jPanel28.add(ModCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 300, -1));
+
+        DelCliente.setBackground(new java.awt.Color(68, 68, 68));
+        DelCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        DelCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DelClienteMouseClicked(evt);
+            }
+        });
+
+        jLabel170.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel170.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel170.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel170.setText("Eliminar Cliente");
+
+        javax.swing.GroupLayout DelClienteLayout = new javax.swing.GroupLayout(DelCliente);
+        DelCliente.setLayout(DelClienteLayout);
+        DelClienteLayout.setHorizontalGroup(
+            DelClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DelClienteLayout.createSequentialGroup()
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addComponent(jLabel170)
+                .addGap(53, 53, 53))
+        );
+        DelClienteLayout.setVerticalGroup(
+            DelClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DelClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel170)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel28.add(DelCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, -1, -1));
+
+        javax.swing.GroupLayout GestionarClientesLayout = new javax.swing.GroupLayout(GestionarClientes.getContentPane());
+        GestionarClientes.getContentPane().setLayout(GestionarClientesLayout);
+        GestionarClientesLayout.setHorizontalGroup(
+            GestionarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        GestionarClientesLayout.setVerticalGroup(
+            GestionarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
+        );
+
+        jLabel169.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel169.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel169.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel169.setText("Agregar Cliente");
+
+        jPanel30.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel30.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel31.setBackground(new java.awt.Color(68, 68, 68));
+
+        jLabel164.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel164.setText("Agregar Cliente");
+
+        javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
+        jPanel31.setLayout(jPanel31Layout);
+        jPanel31Layout.setHorizontalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel31Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel164, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(519, Short.MAX_VALUE))
+        );
+        jPanel31Layout.setVerticalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addComponent(jLabel164)
+                .addGap(15, 15, 15))
+        );
+
+        jPanel30.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 760, 80));
+
+        addCliente1.setBackground(new java.awt.Color(68, 68, 68));
+        addCliente1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel172.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel172.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel172.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel172.setText("Agregar Cliente");
+
+        javax.swing.GroupLayout addCliente1Layout = new javax.swing.GroupLayout(addCliente1);
+        addCliente1.setLayout(addCliente1Layout);
+        addCliente1Layout.setHorizontalGroup(
+            addCliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 296, Short.MAX_VALUE)
+            .addGroup(addCliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCliente1Layout.createSequentialGroup()
+                    .addContainerGap(69, Short.MAX_VALUE)
+                    .addComponent(jLabel172)
+                    .addGap(46, 46, 46)))
+        );
+        addCliente1Layout.setVerticalGroup(
+            addCliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 46, Short.MAX_VALUE)
+            .addGroup(addCliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(addCliente1Layout.createSequentialGroup()
+                    .addGap(2, 2, 2)
+                    .addComponent(jLabel172)
+                    .addContainerGap(16, Short.MAX_VALUE)))
+        );
+
+        jPanel30.add(addCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 300, 50));
+
+        jLabel171.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel171.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel171.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel171.setText("Correo electrónico");
+        jPanel30.add(jLabel171, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+
+        jLabel173.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel173.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel173.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel173.setText("ID Cliente");
+        jPanel30.add(jLabel173, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+
+        jLabel174.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel174.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel174.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel174.setText("Nombre");
+        jPanel30.add(jLabel174, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, 20));
+        jPanel30.add(namec, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 180, -1));
+        jPanel30.add(idc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 180, -1));
+        jPanel30.add(namec1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 180, -1));
+
+        javax.swing.GroupLayout AddCLayout = new javax.swing.GroupLayout(AddC.getContentPane());
+        AddC.getContentPane().setLayout(AddCLayout);
+        AddCLayout.setHorizontalGroup(
+            AddCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, 651, Short.MAX_VALUE)
+        );
+        AddCLayout.setVerticalGroup(
+            AddCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
+        );
+
+        jPanel32.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel32.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel33.setBackground(new java.awt.Color(68, 68, 68));
+
+        jLabel175.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel175.setText("Agregar Cliente");
+
+        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
+        jPanel33.setLayout(jPanel33Layout);
+        jPanel33Layout.setHorizontalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel33Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel175, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(519, Short.MAX_VALUE))
+        );
+        jPanel33Layout.setVerticalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addComponent(jLabel175)
+                .addGap(15, 15, 15))
+        );
+
+        jPanel32.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 760, 80));
+
+        addCliente2.setBackground(new java.awt.Color(68, 68, 68));
+        addCliente2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel176.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel176.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel176.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel176.setText("Modificar Cliente");
+
+        javax.swing.GroupLayout addCliente2Layout = new javax.swing.GroupLayout(addCliente2);
+        addCliente2.setLayout(addCliente2Layout);
+        addCliente2Layout.setHorizontalGroup(
+            addCliente2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCliente2Layout.createSequentialGroup()
+                .addContainerGap(47, Short.MAX_VALUE)
+                .addComponent(jLabel176)
+                .addGap(55, 55, 55))
+        );
+        addCliente2Layout.setVerticalGroup(
+            addCliente2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addCliente2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel176)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel32.add(addCliente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 300, 50));
+
+        jLabel177.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel177.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel177.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel177.setText("Correo electrónico");
+        jPanel32.add(jLabel177, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+
+        jLabel178.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel178.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel178.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel178.setText("ID Cliente");
+        jPanel32.add(jLabel178, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+
+        jLabel179.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel179.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel179.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel179.setText("Nombre");
+        jPanel32.add(jLabel179, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, 20));
+        jPanel32.add(namec2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 180, -1));
+        jPanel32.add(idc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 180, -1));
+        jPanel32.add(namec3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 180, -1));
+
+        javax.swing.GroupLayout ModCLayout = new javax.swing.GroupLayout(ModC.getContentPane());
+        ModC.getContentPane().setLayout(ModCLayout);
+        ModCLayout.setHorizontalGroup(
+            ModCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 651, Short.MAX_VALUE)
+        );
+        ModCLayout.setVerticalGroup(
+            ModCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel34.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel34.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel35.setBackground(new java.awt.Color(68, 68, 68));
+
+        jLabel180.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel180.setText("Eliminar Cliente");
+
+        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
+        jPanel35.setLayout(jPanel35Layout);
+        jPanel35Layout.setHorizontalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel35Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel180, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(519, Short.MAX_VALUE))
+        );
+        jPanel35Layout.setVerticalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addComponent(jLabel180)
+                .addGap(15, 15, 15))
+        );
+
+        jPanel34.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 760, 80));
+
+        addCliente3.setBackground(new java.awt.Color(68, 68, 68));
+        addCliente3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel181.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel181.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel181.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel181.setText("Eliminar Cliente");
+
+        javax.swing.GroupLayout addCliente3Layout = new javax.swing.GroupLayout(addCliente3);
+        addCliente3.setLayout(addCliente3Layout);
+        addCliente3Layout.setHorizontalGroup(
+            addCliente3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCliente3Layout.createSequentialGroup()
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addComponent(jLabel181)
+                .addGap(55, 55, 55))
+        );
+        addCliente3Layout.setVerticalGroup(
+            addCliente3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addCliente3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel181)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel34.add(addCliente3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 300, 50));
+
+        jLabel183.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel183.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel183.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel183.setText("ID Cliente");
+        jPanel34.add(jLabel183, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
+
+        jPanel34.add(idc_cb, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 280, -1));
+
+        javax.swing.GroupLayout DelCLayout = new javax.swing.GroupLayout(DelC.getContentPane());
+        DelC.getContentPane().setLayout(DelCLayout);
+        DelCLayout.setHorizontalGroup(
+            DelCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, 651, Short.MAX_VALUE)
+        );
+        DelCLayout.setVerticalGroup(
+            DelCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel36.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel36.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel37.setBackground(new java.awt.Color(68, 68, 68));
+
+        jLabel182.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel182.setText("Gestión de Proveedores");
+
+        javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
+        jPanel37.setLayout(jPanel37Layout);
+        jPanel37Layout.setHorizontalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel37Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel182)
+                .addContainerGap(482, Short.MAX_VALUE))
+        );
+        jPanel37Layout.setVerticalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(jLabel182)
+                .addGap(17, 17, 17))
+        );
+
+        jPanel36.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 760, 80));
+
+        addCliente4.setBackground(new java.awt.Color(68, 68, 68));
+        addCliente4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addCliente4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addCliente4MouseClicked(evt);
+            }
+        });
+
+        jLabel184.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel184.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel184.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel184.setText("Agregar Proveedor");
+
+        javax.swing.GroupLayout addCliente4Layout = new javax.swing.GroupLayout(addCliente4);
+        addCliente4.setLayout(addCliente4Layout);
+        addCliente4Layout.setHorizontalGroup(
+            addCliente4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCliente4Layout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
+                .addComponent(jLabel184)
+                .addGap(34, 34, 34))
+        );
+        addCliente4Layout.setVerticalGroup(
+            addCliente4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCliente4Layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addComponent(jLabel184)
+                .addContainerGap())
+        );
+
+        jPanel36.add(addCliente4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 300, 50));
+
+        ModCliente1.setBackground(new java.awt.Color(68, 68, 68));
+        ModCliente1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ModCliente1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ModCliente1MouseClicked(evt);
+            }
+        });
+
+        jLabel185.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel185.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel185.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel185.setText("Modificar Proveedor");
+
+        javax.swing.GroupLayout ModCliente1Layout = new javax.swing.GroupLayout(ModCliente1);
+        ModCliente1.setLayout(ModCliente1Layout);
+        ModCliente1Layout.setHorizontalGroup(
+            ModCliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModCliente1Layout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addComponent(jLabel185)
+                .addGap(28, 28, 28))
+        );
+        ModCliente1Layout.setVerticalGroup(
+            ModCliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ModCliente1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel185)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        jPanel36.add(ModCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 300, -1));
+
+        DelCliente1.setBackground(new java.awt.Color(68, 68, 68));
+        DelCliente1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        DelCliente1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DelCliente1MouseClicked(evt);
+            }
+        });
+
+        jLabel186.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel186.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel186.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel186.setText("Eliminar Proveedor");
+
+        javax.swing.GroupLayout DelCliente1Layout = new javax.swing.GroupLayout(DelCliente1);
+        DelCliente1.setLayout(DelCliente1Layout);
+        DelCliente1Layout.setHorizontalGroup(
+            DelCliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DelCliente1Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel186)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+        DelCliente1Layout.setVerticalGroup(
+            DelCliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DelCliente1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel186)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel36.add(DelCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 300, -1));
+
+        javax.swing.GroupLayout GestionarPLayout = new javax.swing.GroupLayout(GestionarP.getContentPane());
+        GestionarP.getContentPane().setLayout(GestionarPLayout);
+        GestionarPLayout.setHorizontalGroup(
+            GestionarPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        GestionarPLayout.setVerticalGroup(
+            GestionarPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GestionarPLayout.createSequentialGroup()
+                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel38.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel38.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel39.setBackground(new java.awt.Color(68, 68, 68));
+
+        jLabel187.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel187.setText("Agregar Proveedor");
+
+        javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
+        jPanel39.setLayout(jPanel39Layout);
+        jPanel39Layout.setHorizontalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel39Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel187, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(519, Short.MAX_VALUE))
+        );
+        jPanel39Layout.setVerticalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel39Layout.createSequentialGroup()
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addComponent(jLabel187)
+                .addGap(15, 15, 15))
+        );
+
+        jPanel38.add(jPanel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 760, 80));
+
+        addCliente5.setBackground(new java.awt.Color(68, 68, 68));
+        addCliente5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel188.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel188.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel188.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel188.setText("Agregar Proveedor");
+
+        javax.swing.GroupLayout addCliente5Layout = new javax.swing.GroupLayout(addCliente5);
+        addCliente5.setLayout(addCliente5Layout);
+        addCliente5Layout.setHorizontalGroup(
+            addCliente5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCliente5Layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(jLabel188)
+                .addGap(36, 36, 36))
+        );
+        addCliente5Layout.setVerticalGroup(
+            addCliente5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addCliente5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel188)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel38.add(addCliente5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 300, 50));
+
+        jLabel189.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel189.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel189.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel189.setText("Correo electrónico");
+        jPanel38.add(jLabel189, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+
+        jLabel190.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel190.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel190.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel190.setText("ID Cliente");
+        jPanel38.add(jLabel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+
+        jLabel191.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel191.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel191.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel191.setText("Nombre");
+        jPanel38.add(jLabel191, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, 20));
+        jPanel38.add(namec4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 180, -1));
+        jPanel38.add(idc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 180, -1));
+        jPanel38.add(namec5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 180, -1));
+
+        javax.swing.GroupLayout AddPLayout = new javax.swing.GroupLayout(AddP.getContentPane());
+        AddP.getContentPane().setLayout(AddPLayout);
+        AddPLayout.setHorizontalGroup(
+            AddPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, 651, Short.MAX_VALUE)
+        );
+        AddPLayout.setVerticalGroup(
+            AddPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout ModPLayout = new javax.swing.GroupLayout(ModP.getContentPane());
+        ModP.getContentPane().setLayout(ModPLayout);
+        ModPLayout.setHorizontalGroup(
+            ModPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        ModPLayout.setVerticalGroup(
+            ModPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout DelPLayout = new javax.swing.GroupLayout(DelP.getContentPane());
+        DelP.getContentPane().setLayout(DelPLayout);
+        DelPLayout.setHorizontalGroup(
+            DelPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        DelPLayout.setVerticalGroup(
+            DelPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocationByPlatform(true);
@@ -1697,6 +2661,9 @@ public class Main extends javax.swing.JFrame {
         crear_b.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         crear_b.setPreferredSize(new java.awt.Dimension(87, 30));
         crear_b.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crear_bMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 crear_bMouseEntered(evt);
             }
@@ -1779,6 +2746,9 @@ public class Main extends javax.swing.JFrame {
         eliminar_b.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         eliminar_b.setPreferredSize(new java.awt.Dimension(87, 30));
         eliminar_b.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                eliminar_bMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 eliminar_bMouseEntered(evt);
             }
@@ -2229,6 +3199,9 @@ public class Main extends javax.swing.JFrame {
         bt_bitacora1.setBackground(new java.awt.Color(68, 68, 68));
         bt_bitacora1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bt_bitacora1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_bitacora1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 bt_bitacora1MouseEntered(evt);
             }
@@ -2268,6 +3241,9 @@ public class Main extends javax.swing.JFrame {
         bt_clientes.setBackground(new java.awt.Color(68, 68, 68));
         bt_clientes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bt_clientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_clientesMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 bt_clientesMouseEntered(evt);
             }
@@ -3527,7 +4503,10 @@ public class Main extends javax.swing.JFrame {
 
     private void modificar_bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar_bMouseClicked
         // TODO add your handling code here:
-
+        ModUser.pack();
+        ModUser.setModal(true);
+        ModUser.setLocationRelativeTo(this);
+        ModUser.setVisible(true);
     }//GEN-LAST:event_modificar_bMouseClicked
 
     private void crear_bMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_bMouseExited
@@ -3772,7 +4751,7 @@ public class Main extends javax.swing.JFrame {
 
     private void hventaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hventaMouseClicked
         // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_hventaMouseClicked
 
     private void invMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_invMouseEntered
@@ -3896,6 +4875,74 @@ public class Main extends javax.swing.JFrame {
         DelProd.setVisible(true);
     }//GEN-LAST:event_eprodMouseClicked
 
+    private void crear_bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_bMouseClicked
+        // TODO add your handling code here:
+        CrearUser.pack();
+        CrearUser.setModal(true);
+        CrearUser.setLocationRelativeTo(this);
+        CrearUser.setVisible(true);
+    }//GEN-LAST:event_crear_bMouseClicked
+
+    private void eliminar_bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminar_bMouseClicked
+        // TODO add your handling code here:
+        DelUser.pack();
+        DelUser.setModal(true);
+        DelUser.setLocationRelativeTo(this);
+        DelUser.setVisible(true);
+    }//GEN-LAST:event_eliminar_bMouseClicked
+
+    private void bt_clientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_clientesMouseClicked
+        // TODO add your handling code here:
+        GestionarClientes.pack();
+        GestionarClientes.setModal(true);
+        GestionarClientes.setLocationRelativeTo(this);
+        GestionarClientes.setVisible(true);
+    }//GEN-LAST:event_bt_clientesMouseClicked
+
+    private void addClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addClienteMouseClicked
+        // TODO add your handling code here:
+        AddC.pack();
+        AddC.setModal(true);
+        AddC.setLocationRelativeTo(this);
+        AddC.setVisible(true);
+    }//GEN-LAST:event_addClienteMouseClicked
+
+    private void ModClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModClienteMouseClicked
+        // TODO add your handling code here:
+        ModC.pack();
+        ModC.setModal(true);
+        ModC.setLocationRelativeTo(this);
+        ModC.setVisible(true);
+    }//GEN-LAST:event_ModClienteMouseClicked
+
+    private void DelClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DelClienteMouseClicked
+        // TODO add your handling code here:
+        DelC.pack();
+        DelC.setModal(true);
+        DelC.setLocationRelativeTo(this);
+        DelC.setVisible(true);
+    }//GEN-LAST:event_DelClienteMouseClicked
+
+    private void addCliente4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addCliente4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addCliente4MouseClicked
+
+    private void ModCliente1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModCliente1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModCliente1MouseClicked
+
+    private void DelCliente1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DelCliente1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DelCliente1MouseClicked
+
+    private void bt_bitacora1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_bitacora1MouseClicked
+        // TODO add your handling code here:
+        GestionarP.pack();
+        GestionarP.setModal(true);
+        GestionarP.setLocationRelativeTo(this);
+        GestionarP.setVisible(true);
+    }//GEN-LAST:event_bt_bitacora1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -3932,11 +4979,32 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog AddC;
+    private javax.swing.JDialog AddP;
     private javax.swing.JDialog CrearProd;
+    private javax.swing.JDialog CrearUser;
+    private javax.swing.JDialog DelC;
+    private javax.swing.JPanel DelCliente;
+    private javax.swing.JPanel DelCliente1;
+    private javax.swing.JDialog DelP;
     private javax.swing.JDialog DelProd;
+    private javax.swing.JDialog DelUser;
+    private javax.swing.JDialog GestionarClientes;
+    private javax.swing.JDialog GestionarP;
     private javax.swing.JFrame Jf_VistaCliente;
     private javax.swing.JFrame Jf_login;
+    private javax.swing.JDialog ModC;
+    private javax.swing.JPanel ModCliente;
+    private javax.swing.JPanel ModCliente1;
+    private javax.swing.JDialog ModP;
     private javax.swing.JDialog ModProd;
+    private javax.swing.JDialog ModUser;
+    private javax.swing.JPanel addCliente;
+    private javax.swing.JPanel addCliente1;
+    private javax.swing.JPanel addCliente2;
+    private javax.swing.JPanel addCliente3;
+    private javax.swing.JPanel addCliente4;
+    private javax.swing.JPanel addCliente5;
     private javax.swing.JPanel aprod;
     private javax.swing.JPanel bt_bitacora;
     private javax.swing.JPanel bt_bitacora1;
@@ -3965,6 +5033,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel eliminar_r1;
     private javax.swing.JTextField embalaje2;
     private javax.swing.JTextField embalaje3;
+    private javax.swing.JTextField embalaje4;
+    private javax.swing.JTextField embalaje5;
     private javax.swing.JPanel eprod;
     private javax.swing.JPanel gfactura;
     private javax.swing.JPanel h_ventas;
@@ -3972,6 +5042,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel hventa;
     private javax.swing.JPanel i_productos;
     private javax.swing.JPanel i_productos1;
+    private javax.swing.JTextField idc1;
+    private javax.swing.JTextField idc2;
+    private javax.swing.JTextField idc3;
+    private javax.swing.JComboBox<String> idc_cb;
     private javax.swing.JPanel inv;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
@@ -4031,12 +5105,52 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel148;
     private javax.swing.JLabel jLabel149;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel150;
+    private javax.swing.JLabel jLabel151;
+    private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel153;
+    private javax.swing.JLabel jLabel154;
+    private javax.swing.JLabel jLabel155;
+    private javax.swing.JLabel jLabel156;
     private javax.swing.JLabel jLabel157;
     private javax.swing.JLabel jLabel158;
+    private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
+    private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel173;
+    private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel175;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel jLabel178;
+    private javax.swing.JLabel jLabel179;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel180;
+    private javax.swing.JLabel jLabel181;
+    private javax.swing.JLabel jLabel182;
+    private javax.swing.JLabel jLabel183;
+    private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel187;
+    private javax.swing.JLabel jLabel188;
+    private javax.swing.JLabel jLabel189;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel190;
+    private javax.swing.JLabel jLabel191;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -4135,8 +5249,29 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -4177,6 +5312,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel mprod;
     private javax.swing.JTextField name2;
     private javax.swing.JTextField name3;
+    private javax.swing.JTextField namec;
+    private javax.swing.JTextField namec1;
+    private javax.swing.JTextField namec2;
+    private javax.swing.JTextField namec3;
+    private javax.swing.JTextField namec4;
+    private javax.swing.JTextField namec5;
     private javax.swing.JPanel p_vendidoTienda;
     private javax.swing.JPanel p_vendidoTienda1;
     private javax.swing.JPanel p_vendidopais;
@@ -4187,6 +5328,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel rventa;
     private javax.swing.JTextField size1;
     private javax.swing.JTextField size2;
+    private javax.swing.JTextField size3;
+    private javax.swing.JTextField size4;
     private javax.swing.JPanel t_cocapepsi;
     private javax.swing.JPanel t_cocapepsi1;
     private javax.swing.JPanel t_ventasyear;
@@ -4198,7 +5341,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField un_login;
     private javax.swing.JTextField upc2;
     private javax.swing.JTextField upc3;
+    private javax.swing.JTextField upc4;
+    private javax.swing.JTextField upc5;
     private javax.swing.JComboBox<String> updcb;
+    private javax.swing.JComboBox<String> userscb;
     private javax.swing.JPanel vlogout;
     // End of variables declaration//GEN-END:variables
 }
