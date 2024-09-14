@@ -106,6 +106,56 @@ public class Main extends javax.swing.JFrame {
         jLabel108 = new javax.swing.JLabel();
         CrearProd = new javax.swing.JDialog();
         jPanel8 = new javax.swing.JPanel();
+        jLabel129 = new javax.swing.JLabel();
+        jLabel130 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel132 = new javax.swing.JLabel();
+        jLabel133 = new javax.swing.JLabel();
+        jLabel134 = new javax.swing.JLabel();
+        jLabel135 = new javax.swing.JLabel();
+        jLabel136 = new javax.swing.JLabel();
+        jLabel137 = new javax.swing.JLabel();
+        price1 = new javax.swing.JTextField();
+        upc2 = new javax.swing.JTextField();
+        embalaje2 = new javax.swing.JTextField();
+        size1 = new javax.swing.JTextField();
+        marca1 = new javax.swing.JTextField();
+        name2 = new javax.swing.JTextField();
+        cant1 = new javax.swing.JSpinner();
+        type2 = new javax.swing.JTextField();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel131 = new javax.swing.JLabel();
+        jLabel138 = new javax.swing.JLabel();
+        ModProd = new javax.swing.JDialog();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel139 = new javax.swing.JLabel();
+        jLabel140 = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel141 = new javax.swing.JLabel();
+        jLabel142 = new javax.swing.JLabel();
+        jLabel143 = new javax.swing.JLabel();
+        jLabel144 = new javax.swing.JLabel();
+        jLabel145 = new javax.swing.JLabel();
+        jLabel146 = new javax.swing.JLabel();
+        price2 = new javax.swing.JTextField();
+        upc3 = new javax.swing.JTextField();
+        embalaje3 = new javax.swing.JTextField();
+        size2 = new javax.swing.JTextField();
+        marca2 = new javax.swing.JTextField();
+        name3 = new javax.swing.JTextField();
+        cant2 = new javax.swing.JSpinner();
+        type3 = new javax.swing.JTextField();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel147 = new javax.swing.JLabel();
+        jLabel148 = new javax.swing.JLabel();
+        DelProd = new javax.swing.JDialog();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel149 = new javax.swing.JLabel();
+        jPanel17 = new javax.swing.JPanel();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel157 = new javax.swing.JLabel();
+        jLabel158 = new javax.swing.JLabel();
+        updcb = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -579,6 +629,9 @@ public class Main extends javax.swing.JFrame {
         mprod.setBackground(new java.awt.Color(68, 68, 68));
         mprod.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         mprod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mprodMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 mprodMouseEntered(evt);
             }
@@ -618,6 +671,9 @@ public class Main extends javax.swing.JFrame {
         eprod.setBackground(new java.awt.Color(68, 68, 68));
         eprod.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         eprod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                eprodMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 eprodMouseEntered(evt);
             }
@@ -1171,6 +1227,110 @@ public class Main extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(51, 51, 51));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel129.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel129.setText("Ingresar Producto");
+        jPanel8.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
+
+        jLabel130.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel130.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel130.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel130.setText("Cantidad");
+        jPanel8.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
+
+        jPanel9.setBackground(new java.awt.Color(68, 68, 68));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 70));
+
+        jLabel132.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel132.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel132.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel132.setText("Tamaño");
+        jPanel8.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        jLabel133.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel133.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel133.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel133.setText("Medio de Embalaje");
+        jPanel8.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+
+        jLabel134.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel134.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel134.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel134.setText("Marca");
+        jPanel8.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+
+        jLabel135.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel135.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel135.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel135.setText("Nombre");
+        jPanel8.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+
+        jLabel136.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel136.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel136.setText("Precio");
+        jPanel8.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        jLabel137.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel137.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel137.setText("Tipo");
+        jPanel8.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+        jPanel8.add(price1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 210, -1));
+        jPanel8.add(upc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 210, -1));
+        jPanel8.add(embalaje2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 210, -1));
+        jPanel8.add(size1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 210, -1));
+        jPanel8.add(marca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 210, -1));
+        jPanel8.add(name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 210, -1));
+
+        cant1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jPanel8.add(cant1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 210, -1));
+        jPanel8.add(type2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 210, -1));
+
+        jPanel12.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel131.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel131.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel131.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel131.setText("Ingresar Producto");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addComponent(jLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel131)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel8.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 280, 50));
+
+        jLabel138.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel138.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel138.setText("UPC");
+        jPanel8.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
         javax.swing.GroupLayout CrearProdLayout = new javax.swing.GroupLayout(CrearProd.getContentPane());
         CrearProd.getContentPane().setLayout(CrearProdLayout);
         CrearProdLayout.setHorizontalGroup(
@@ -1179,7 +1339,195 @@ public class Main extends javax.swing.JFrame {
         );
         CrearProdLayout.setVerticalGroup(
             CrearProdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(CrearProdLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
+        );
+
+        jPanel13.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel139.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel139.setText("Modificar Producto");
+        jPanel13.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, -1));
+
+        jLabel140.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel140.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel140.setText("Cantidad");
+        jPanel13.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
+
+        jPanel14.setBackground(new java.awt.Color(68, 68, 68));
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 70));
+
+        jLabel141.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel141.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel141.setText("Tamaño");
+        jPanel13.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        jLabel142.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel142.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel142.setText("Medio de Embalaje");
+        jPanel13.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+
+        jLabel143.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel143.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel143.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel143.setText("Marca");
+        jPanel13.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+
+        jLabel144.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel144.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel144.setText("Nombre");
+        jPanel13.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+
+        jLabel145.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel145.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel145.setText("Precio");
+        jPanel13.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        jLabel146.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel146.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel146.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel146.setText("Tipo");
+        jPanel13.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+        jPanel13.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 210, -1));
+        jPanel13.add(upc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 210, -1));
+        jPanel13.add(embalaje3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 210, -1));
+        jPanel13.add(size2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 210, -1));
+        jPanel13.add(marca2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 210, -1));
+        jPanel13.add(name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 210, -1));
+
+        cant2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jPanel13.add(cant2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 210, -1));
+        jPanel13.add(type3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 210, -1));
+
+        jPanel15.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel147.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel147.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel147.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel147.setText("Modificar Producto");
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel147)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel147)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel13.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 280, 50));
+
+        jLabel148.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel148.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel148.setText("UPC");
+        jPanel13.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        javax.swing.GroupLayout ModProdLayout = new javax.swing.GroupLayout(ModProd.getContentPane());
+        ModProd.getContentPane().setLayout(ModProdLayout);
+        ModProdLayout.setHorizontalGroup(
+            ModProdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ModProdLayout.setVerticalGroup(
+            ModProdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+        );
+
+        jPanel16.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel149.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel149.setText("Eliminar Producto");
+        jPanel16.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, -1));
+
+        jPanel17.setBackground(new java.awt.Color(68, 68, 68));
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 770, Short.MAX_VALUE)
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        jPanel16.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 70));
+
+        jPanel18.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel157.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel157.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
+        jLabel157.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel157.setText("Eliminar Producto");
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel157)
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel157)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel16.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 280, 50));
+
+        jLabel158.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel158.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
+        jLabel158.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel158.setText("UPC");
+        jPanel16.add(jLabel158, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+
+        jPanel16.add(updcb, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 280, -1));
+
+        javax.swing.GroupLayout DelProdLayout = new javax.swing.GroupLayout(DelProd.getContentPane());
+        DelProd.getContentPane().setLayout(DelProdLayout);
+        DelProdLayout.setHorizontalGroup(
+            DelProdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        DelProdLayout.setVerticalGroup(
+            DelProdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1202,6 +1550,9 @@ public class Main extends javax.swing.JFrame {
         crear_r.setBackground(new java.awt.Color(68, 68, 68));
         crear_r.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         crear_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crear_rMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 crear_rMouseEntered(evt);
             }
@@ -1247,6 +1598,9 @@ public class Main extends javax.swing.JFrame {
         modificar_r.setBackground(new java.awt.Color(68, 68, 68));
         modificar_r.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         modificar_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                modificar_rMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 modificar_rMouseEntered(evt);
             }
@@ -3198,7 +3552,10 @@ public class Main extends javax.swing.JFrame {
 
     private void eliminar_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminar_rMouseClicked
         // TODO add your handling code here:
-
+        DelProd.pack();
+        DelProd.setModal(true);
+        DelProd.setLocationRelativeTo(this);
+        DelProd.setVisible(true);
     }//GEN-LAST:event_eliminar_rMouseClicked
 
     private void modificar_rMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar_rMouseExited
@@ -3507,6 +3864,38 @@ public class Main extends javax.swing.JFrame {
         vlogout.setBackground(new Color(68, 68, 68));
     }//GEN-LAST:event_vlogoutMouseExited
 
+    private void crear_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_rMouseClicked
+        // TODO add your handling code here:
+        CrearProd.pack();
+        CrearProd.setModal(true);
+        CrearProd.setLocationRelativeTo(this);
+        CrearProd.setVisible(true);
+    }//GEN-LAST:event_crear_rMouseClicked
+
+    private void modificar_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar_rMouseClicked
+        // TODO add your handling code here:
+        ModProd.pack();
+        ModProd.setModal(true);
+        ModProd.setLocationRelativeTo(this);
+        ModProd.setVisible(true);
+    }//GEN-LAST:event_modificar_rMouseClicked
+
+    private void mprodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mprodMouseClicked
+        // TODO add your handling code here:
+        ModProd.pack();
+        ModProd.setModal(true);
+        ModProd.setLocationRelativeTo(this);
+        ModProd.setVisible(true);
+    }//GEN-LAST:event_mprodMouseClicked
+
+    private void eprodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eprodMouseClicked
+        // TODO add your handling code here:
+        DelProd.pack();
+        DelProd.setModal(true);
+        DelProd.setLocationRelativeTo(this);
+        DelProd.setVisible(true);
+    }//GEN-LAST:event_eprodMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -3544,8 +3933,10 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog CrearProd;
+    private javax.swing.JDialog DelProd;
     private javax.swing.JFrame Jf_VistaCliente;
     private javax.swing.JFrame Jf_login;
+    private javax.swing.JDialog ModProd;
     private javax.swing.JPanel aprod;
     private javax.swing.JPanel bt_bitacora;
     private javax.swing.JPanel bt_bitacora1;
@@ -3561,6 +3952,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel btn_menuCompras;
     private javax.swing.JPanel c_cliente;
     private javax.swing.JPanel c_cliente1;
+    private javax.swing.JSpinner cant1;
+    private javax.swing.JSpinner cant2;
     private javax.swing.JPanel cpedido;
     private javax.swing.JPanel crear_b;
     private javax.swing.JPanel crear_b1;
@@ -3570,6 +3963,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel eliminar_b1;
     private javax.swing.JPanel eliminar_r;
     private javax.swing.JPanel eliminar_r1;
+    private javax.swing.JTextField embalaje2;
+    private javax.swing.JTextField embalaje3;
     private javax.swing.JPanel eprod;
     private javax.swing.JPanel gfactura;
     private javax.swing.JPanel h_ventas;
@@ -3612,9 +4007,32 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel126;
     private javax.swing.JLabel jLabel127;
     private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel136;
+    private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel138;
+    private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel140;
+    private javax.swing.JLabel jLabel141;
+    private javax.swing.JLabel jLabel142;
+    private javax.swing.JLabel jLabel143;
+    private javax.swing.JLabel jLabel144;
+    private javax.swing.JLabel jLabel145;
+    private javax.swing.JLabel jLabel146;
+    private javax.swing.JLabel jLabel147;
+    private javax.swing.JLabel jLabel148;
+    private javax.swing.JLabel jLabel149;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel157;
+    private javax.swing.JLabel jLabel158;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -3710,6 +4128,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -3717,6 +4142,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -3742,24 +4168,37 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable jt_vistaProductos;
     private javax.swing.JPanel logout;
     private javax.swing.JPanel logout1;
+    private javax.swing.JTextField marca1;
+    private javax.swing.JTextField marca2;
     private javax.swing.JPanel modificar_b;
     private javax.swing.JPanel modificar_b1;
     private javax.swing.JPanel modificar_r;
     private javax.swing.JPanel modificar_r1;
     private javax.swing.JPanel mprod;
+    private javax.swing.JTextField name2;
+    private javax.swing.JTextField name3;
     private javax.swing.JPanel p_vendidoTienda;
     private javax.swing.JPanel p_vendidoTienda1;
     private javax.swing.JPanel p_vendidopais;
     private javax.swing.JPanel p_vendidopais1;
+    private javax.swing.JTextField price1;
+    private javax.swing.JTextField price2;
     private javax.swing.JPasswordField pssword_log;
     private javax.swing.JPanel rventa;
+    private javax.swing.JTextField size1;
+    private javax.swing.JTextField size2;
     private javax.swing.JPanel t_cocapepsi;
     private javax.swing.JPanel t_cocapepsi1;
     private javax.swing.JPanel t_ventasyear;
     private javax.swing.JPanel t_ventasyear1;
     private javax.swing.JPanel top_ventas;
     private javax.swing.JPanel top_ventas1;
+    private javax.swing.JTextField type2;
+    private javax.swing.JTextField type3;
     private javax.swing.JTextField un_login;
+    private javax.swing.JTextField upc2;
+    private javax.swing.JTextField upc3;
+    private javax.swing.JComboBox<String> updcb;
     private javax.swing.JPanel vlogout;
     // End of variables declaration//GEN-END:variables
 }
