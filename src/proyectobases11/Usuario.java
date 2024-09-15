@@ -2,7 +2,12 @@ package proyectobases11;
 
 public class Usuario {
 
-    public String username, accion, fecha;
+    public String username,password ,accion, fecha;
+
+    public Usuario(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
     public Usuario() {
     }
