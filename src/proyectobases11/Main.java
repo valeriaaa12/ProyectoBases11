@@ -151,7 +151,7 @@ public class Main extends javax.swing.JFrame {
         jPanel16 = new javax.swing.JPanel();
         jLabel149 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
-        jPanel18 = new javax.swing.JPanel();
+        btn_eliminarProducto = new javax.swing.JPanel();
         jLabel157 = new javax.swing.JLabel();
         jLabel158 = new javax.swing.JLabel();
         updcb = new javax.swing.JComboBox<>();
@@ -469,9 +469,7 @@ public class Main extends javax.swing.JFrame {
         jLabel17.setBackground(new java.awt.Color(255, 255, 255));
         jLabel17.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 36)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("Empresa Minorista");
-
-        jLabel106.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (144).png")); // NOI18N
+        jLabel17.setText("Jetstereo");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -496,11 +494,11 @@ public class Main extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(117, 117, 117)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(185, 185, 185)
-                        .addComponent(bt_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(bt_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -520,7 +518,7 @@ public class Main extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(112, 112, 112)
                                 .addComponent(jLabel97)))
-                        .addGap(18, 18, 18)
+                        .addGap(11, 11, 11)
                         .addComponent(jLabel17)))
                 .addGap(11, 11, 11)
                 .addComponent(un_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -542,7 +540,7 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        jPanel1.setBackground(new java.awt.Color(34, 33, 33));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -557,7 +555,8 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 810, 380));
 
-        jPanel5.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel5.setBackground(new java.awt.Color(22, 56, 242));
+        jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel5.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 jPanel5AncestorAdded(evt);
@@ -569,20 +568,18 @@ public class Main extends javax.swing.JFrame {
         });
 
         jLabel94.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel94.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 18)); // NOI18N
+        jLabel94.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
         jLabel94.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel94.setText("Empresa Minorista");
+        jLabel94.setText("Jetstereo");
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
-        jLabel107.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (144).png")); // NOI18N
 
         jLabel98.setBackground(new java.awt.Color(255, 255, 255));
         jLabel98.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 10)); // NOI18N
         jLabel98.setForeground(new java.awt.Color(255, 255, 255));
         jLabel98.setText("Gestión de Ventas");
 
-        hventa.setBackground(new java.awt.Color(68, 68, 68));
+        hventa.setBackground(new java.awt.Color(22, 56, 242));
         hventa.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         hventa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -600,8 +597,6 @@ public class Main extends javax.swing.JFrame {
         jLabel113.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel113.setForeground(new java.awt.Color(255, 255, 255));
         jLabel113.setText("Historial de Ventas");
-
-        jLabel122.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (155).png")); // NOI18N
 
         javax.swing.GroupLayout hventaLayout = new javax.swing.GroupLayout(hventa);
         hventa.setLayout(hventaLayout);
@@ -626,7 +621,7 @@ public class Main extends javax.swing.JFrame {
 
         jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        inv.setBackground(new java.awt.Color(68, 68, 68));
+        inv.setBackground(new java.awt.Color(22, 56, 242));
         inv.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         inv.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -641,10 +636,6 @@ public class Main extends javax.swing.JFrame {
         jLabel112.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel112.setForeground(new java.awt.Color(255, 255, 255));
         jLabel112.setText("Inventario Disponible");
-
-        jLabel124.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (166).png")); // NOI18N
-
-        jLabel125.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (166).png")); // NOI18N
 
         javax.swing.GroupLayout invLayout = new javax.swing.GroupLayout(inv);
         inv.setLayout(invLayout);
@@ -666,7 +657,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, invLayout.createSequentialGroup()
                 .addGroup(invLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(invLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(8, Short.MAX_VALUE)
                         .addComponent(jLabel112))
                     .addGroup(invLayout.createSequentialGroup()
                         .addComponent(jLabel125)
@@ -675,7 +666,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel124))
         );
 
-        aprod.setBackground(new java.awt.Color(68, 68, 68));
+        aprod.setBackground(new java.awt.Color(22, 56, 242));
         aprod.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         aprod.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -690,8 +681,6 @@ public class Main extends javax.swing.JFrame {
         jLabel114.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel114.setForeground(new java.awt.Color(255, 255, 255));
         jLabel114.setText("Agregar Producto");
-
-        jLabel127.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (166).png")); // NOI18N
 
         javax.swing.GroupLayout aprodLayout = new javax.swing.GroupLayout(aprod);
         aprod.setLayout(aprodLayout);
@@ -711,10 +700,10 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(aprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel127)
                     .addComponent(jLabel114))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
-        mprod.setBackground(new java.awt.Color(68, 68, 68));
+        mprod.setBackground(new java.awt.Color(22, 56, 242));
         mprod.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         mprod.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -732,8 +721,6 @@ public class Main extends javax.swing.JFrame {
         jLabel115.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel115.setForeground(new java.awt.Color(255, 255, 255));
         jLabel115.setText("Modificar Producto");
-
-        jLabel126.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (166).png")); // NOI18N
 
         javax.swing.GroupLayout mprodLayout = new javax.swing.GroupLayout(mprod);
         mprod.setLayout(mprodLayout);
@@ -756,7 +743,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel126))
         );
 
-        eprod.setBackground(new java.awt.Color(68, 68, 68));
+        eprod.setBackground(new java.awt.Color(22, 56, 242));
         eprod.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         eprod.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -774,8 +761,6 @@ public class Main extends javax.swing.JFrame {
         jLabel116.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel116.setForeground(new java.awt.Color(255, 255, 255));
         jLabel116.setText("Eliminar Producto");
-
-        jLabel128.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (166).png")); // NOI18N
 
         javax.swing.GroupLayout eprodLayout = new javax.swing.GroupLayout(eprod);
         eprod.setLayout(eprodLayout);
@@ -796,7 +781,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(eprodLayout.createSequentialGroup()
                 .addComponent(jLabel128)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jLabel117.setBackground(new java.awt.Color(255, 255, 255));
@@ -806,7 +791,7 @@ public class Main extends javax.swing.JFrame {
 
         jSeparator12.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        gfactura.setBackground(new java.awt.Color(68, 68, 68));
+        gfactura.setBackground(new java.awt.Color(22, 56, 242));
         gfactura.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         gfactura.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -839,10 +824,10 @@ public class Main extends javax.swing.JFrame {
             .addGroup(gfacturaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel118)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        cpedido.setBackground(new java.awt.Color(68, 68, 68));
+        cpedido.setBackground(new java.awt.Color(22, 56, 242));
         cpedido.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         cpedido.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -881,7 +866,7 @@ public class Main extends javax.swing.JFrame {
 
         jSeparator13.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        vlogout.setBackground(new java.awt.Color(68, 68, 68));
+        vlogout.setBackground(new java.awt.Color(22, 56, 242));
         vlogout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         vlogout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -925,9 +910,9 @@ public class Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel95))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -966,7 +951,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(vlogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -987,17 +972,17 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(inv, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(inv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(eprod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(aprod, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(aprod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(mprod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel117))
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel5Layout.createSequentialGroup()
-                                    .addComponent(gfactura, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gfactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(cpedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1029,14 +1014,15 @@ public class Main extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(34, 33, 33));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel6.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel6.setBackground(new java.awt.Color(22, 56, 242));
 
         jSeparator9.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        btn_logout.setBackground(new java.awt.Color(68, 68, 68));
+        btn_logout.setBackground(new java.awt.Color(22, 56, 242));
+        btn_logout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_logout.setForeground(new java.awt.Color(255, 255, 255));
         btn_logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -1077,11 +1063,11 @@ public class Main extends javax.swing.JFrame {
         jLabel100.setText("Reportes de Compra y Productos");
 
         jLabel110.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel110.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 18)); // NOI18N
+        jLabel110.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
         jLabel110.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel110.setText("Empresa Minorista");
+        jLabel110.setText("Jetstereo");
 
-        btn_menuCompras.setBackground(new java.awt.Color(68, 68, 68));
+        btn_menuCompras.setBackground(new java.awt.Color(22, 56, 242));
         btn_menuCompras.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_menuCompras.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1117,7 +1103,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        btn_listarProductos.setBackground(new java.awt.Color(68, 68, 68));
+        btn_listarProductos.setBackground(new java.awt.Color(22, 56, 242));
         btn_listarProductos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_listarProductos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -1150,22 +1136,16 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jLabel109.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (144).png")); // NOI18N
-
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel110)
-                        .addGap(6, 6, 6)))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel109, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(jLabel110, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -1177,7 +1157,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_listarProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
                 .addComponent(btn_logout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1199,13 +1179,15 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_logout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel109))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel110)))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel109)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel110)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        jPanel4.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 140));
+        jPanel4.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 150));
 
         jt_vistaProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1233,11 +1215,14 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE)
         );
 
-        jPanel7.setBackground(new java.awt.Color(34, 33, 33));
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel7.add(jt_buscador, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 250, -1));
 
-        btn_buscarProducto.setBackground(new java.awt.Color(68, 68, 68));
+        btn_buscarProducto.setBackground(new java.awt.Color(22, 56, 242));
+        btn_buscarProducto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel103.setIcon(new javax.swing.ImageIcon("C:\\Users\\carlo\\Documents\\NetBeansProjects\\ProyectoBases11\\icons\\buscar.png")); // NOI18N
 
         javax.swing.GroupLayout btn_buscarProductoLayout = new javax.swing.GroupLayout(btn_buscarProducto);
         btn_buscarProducto.setLayout(btn_buscarProductoLayout);
@@ -1253,7 +1238,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(btn_buscarProductoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel103)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel7.add(btn_buscarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 30, 30));
@@ -1273,7 +1258,16 @@ public class Main extends javax.swing.JFrame {
 
         jPanel7.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 520, 300));
 
-        btn_comprar.setBackground(new java.awt.Color(68, 68, 68));
+        btn_comprar.setBackground(new java.awt.Color(22, 56, 242));
+        btn_comprar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_comprar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_comprarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_comprarMouseExited(evt);
+            }
+        });
 
         jLabel104.setBackground(new java.awt.Color(255, 255, 255));
         jLabel104.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
@@ -1294,7 +1288,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(btn_comprarLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jLabel104)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         jPanel7.add(btn_comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 170, 40));
@@ -1310,22 +1304,21 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
         );
 
-        jLabel108.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (144).png")); // NOI18N
-
-        jPanel8.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel129.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel129.setForeground(new java.awt.Color(255, 255, 255));
         jLabel129.setText("Ingresar Producto");
         jPanel8.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
 
         jLabel130.setBackground(new java.awt.Color(255, 255, 255));
         jLabel130.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel130.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel130.setForeground(new java.awt.Color(22, 56, 242));
         jLabel130.setText("Cantidad");
         jPanel8.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
-        jPanel9.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel9.setBackground(new java.awt.Color(22, 56, 242));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -1342,37 +1335,37 @@ public class Main extends javax.swing.JFrame {
 
         jLabel132.setBackground(new java.awt.Color(255, 255, 255));
         jLabel132.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel132.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel132.setForeground(new java.awt.Color(22, 56, 242));
         jLabel132.setText("Tamaño");
         jPanel8.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         jLabel133.setBackground(new java.awt.Color(255, 255, 255));
         jLabel133.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel133.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel133.setForeground(new java.awt.Color(22, 56, 242));
         jLabel133.setText("Medio de Embalaje");
         jPanel8.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
         jLabel134.setBackground(new java.awt.Color(255, 255, 255));
         jLabel134.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel134.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel134.setForeground(new java.awt.Color(22, 56, 242));
         jLabel134.setText("Marca");
         jPanel8.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
         jLabel135.setBackground(new java.awt.Color(255, 255, 255));
         jLabel135.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel135.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel135.setForeground(new java.awt.Color(22, 56, 242));
         jLabel135.setText("Nombre");
         jPanel8.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         jLabel136.setBackground(new java.awt.Color(255, 255, 255));
         jLabel136.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel136.setForeground(new java.awt.Color(22, 56, 242));
         jLabel136.setText("Precio");
         jPanel8.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
         jLabel137.setBackground(new java.awt.Color(255, 255, 255));
         jLabel137.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel137.setForeground(new java.awt.Color(22, 56, 242));
         jLabel137.setText("Tipo");
         jPanel8.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
         jPanel8.add(price1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 210, -1));
@@ -1386,8 +1379,16 @@ public class Main extends javax.swing.JFrame {
         jPanel8.add(cant1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 210, -1));
         jPanel8.add(type2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 210, -1));
 
-        jPanel12.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel12.setBackground(new java.awt.Color(22, 56, 242));
         jPanel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel12MouseExited(evt);
+            }
+        });
 
         jLabel131.setBackground(new java.awt.Color(255, 255, 255));
         jLabel131.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
@@ -1415,7 +1416,7 @@ public class Main extends javax.swing.JFrame {
 
         jLabel138.setBackground(new java.awt.Color(255, 255, 255));
         jLabel138.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel138.setForeground(new java.awt.Color(22, 56, 242));
         jLabel138.setText("UPC");
         jPanel8.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
@@ -1430,20 +1431,21 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
         );
 
-        jPanel13.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel139.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel139.setForeground(new java.awt.Color(255, 255, 255));
         jLabel139.setText("Modificar Producto");
         jPanel13.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, -1));
 
-        jLabel140.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel140.setBackground(new java.awt.Color(0, 0, 0));
         jLabel140.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel140.setForeground(new java.awt.Color(22, 56, 242));
         jLabel140.setText("Cantidad");
         jPanel13.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
-        jPanel14.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel14.setBackground(new java.awt.Color(22, 56, 242));
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -1458,39 +1460,39 @@ public class Main extends javax.swing.JFrame {
 
         jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 70));
 
-        jLabel141.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel141.setBackground(new java.awt.Color(0, 0, 0));
         jLabel141.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel141.setForeground(new java.awt.Color(22, 56, 242));
         jLabel141.setText("Tamaño");
         jPanel13.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
-        jLabel142.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel142.setBackground(new java.awt.Color(0, 0, 0));
         jLabel142.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel142.setForeground(new java.awt.Color(22, 56, 242));
         jLabel142.setText("Medio de Embalaje");
         jPanel13.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
-        jLabel143.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel143.setBackground(new java.awt.Color(0, 0, 0));
         jLabel143.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel143.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel143.setForeground(new java.awt.Color(22, 56, 242));
         jLabel143.setText("Marca");
         jPanel13.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
-        jLabel144.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel144.setBackground(new java.awt.Color(0, 0, 0));
         jLabel144.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel144.setForeground(new java.awt.Color(22, 56, 242));
         jLabel144.setText("Nombre");
         jPanel13.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
-        jLabel145.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel145.setBackground(new java.awt.Color(0, 0, 0));
         jLabel145.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel145.setForeground(new java.awt.Color(22, 56, 242));
         jLabel145.setText("Precio");
         jPanel13.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
-        jLabel146.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel146.setBackground(new java.awt.Color(0, 0, 0));
         jLabel146.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel146.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel146.setForeground(new java.awt.Color(22, 56, 242));
         jLabel146.setText("Tipo");
         jPanel13.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
         jPanel13.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 210, -1));
@@ -1504,8 +1506,16 @@ public class Main extends javax.swing.JFrame {
         jPanel13.add(cant2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 210, -1));
         jPanel13.add(type3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 210, -1));
 
-        jPanel15.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel15.setBackground(new java.awt.Color(22, 56, 242));
         jPanel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel15MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel15MouseExited(evt);
+            }
+        });
 
         jLabel147.setBackground(new java.awt.Color(255, 255, 255));
         jLabel147.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
@@ -1531,9 +1541,9 @@ public class Main extends javax.swing.JFrame {
 
         jPanel13.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 280, 50));
 
-        jLabel148.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel148.setBackground(new java.awt.Color(0, 0, 0));
         jLabel148.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel148.setForeground(new java.awt.Color(22, 56, 242));
         jLabel148.setText("UPC");
         jPanel13.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
@@ -1548,14 +1558,14 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
         );
 
-        jPanel16.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel149.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
         jLabel149.setText("Eliminar Producto");
         jPanel16.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, -1));
 
-        jPanel17.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel17.setBackground(new java.awt.Color(22, 56, 242));
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1570,32 +1580,40 @@ public class Main extends javax.swing.JFrame {
 
         jPanel16.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 70));
 
-        jPanel18.setBackground(new java.awt.Color(68, 68, 68));
-        jPanel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_eliminarProducto.setBackground(new java.awt.Color(22, 56, 242));
+        btn_eliminarProducto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_eliminarProducto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_eliminarProductoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_eliminarProductoMouseExited(evt);
+            }
+        });
 
         jLabel157.setBackground(new java.awt.Color(255, 255, 255));
         jLabel157.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
         jLabel157.setForeground(new java.awt.Color(255, 255, 255));
         jLabel157.setText("Eliminar Producto");
 
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
+        javax.swing.GroupLayout btn_eliminarProductoLayout = new javax.swing.GroupLayout(btn_eliminarProducto);
+        btn_eliminarProducto.setLayout(btn_eliminarProductoLayout);
+        btn_eliminarProductoLayout.setHorizontalGroup(
+            btn_eliminarProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_eliminarProductoLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jLabel157)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
+        btn_eliminarProductoLayout.setVerticalGroup(
+            btn_eliminarProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_eliminarProductoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel157)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        jPanel16.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 280, 50));
+        jPanel16.add(btn_eliminarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 280, 50));
 
         jLabel158.setBackground(new java.awt.Color(255, 255, 255));
         jLabel158.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
@@ -2482,7 +2500,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
-        jPanel40.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel40.setBackground(new java.awt.Color(255, 255, 255));
         jPanel40.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel192.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
@@ -2495,7 +2513,7 @@ public class Main extends javax.swing.JFrame {
         jLabel193.setText("Total");
         jPanel40.add(jLabel193, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
-        jPanel41.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel41.setBackground(new java.awt.Color(22, 56, 242));
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
@@ -2517,11 +2535,17 @@ public class Main extends javax.swing.JFrame {
         jPanel40.add(jLabel197, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
         jPanel40.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 210, -1));
 
-        generarfactura.setBackground(new java.awt.Color(68, 68, 68));
+        generarfactura.setBackground(new java.awt.Color(22, 56, 242));
         generarfactura.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         generarfactura.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 generarfacturaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                generarfacturaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                generarfacturaMouseExited(evt);
             }
         });
 
@@ -2583,14 +2607,15 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
         );
 
-        jPanel42.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel42.setBackground(new java.awt.Color(255, 255, 255));
         jPanel42.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel195.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel195.setForeground(new java.awt.Color(255, 255, 255));
         jLabel195.setText(" Factura");
         jPanel42.add(jLabel195, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
 
-        jPanel43.setBackground(new java.awt.Color(68, 68, 68));
+        jPanel43.setBackground(new java.awt.Color(22, 56, 242));
 
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
@@ -3410,8 +3435,6 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel47))
         );
-
-        jLabel105.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valeria Romero\\Downloads\\image (144).png")); // NOI18N
 
         jSeparator11.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
@@ -4889,11 +4912,11 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_bitacora5MouseExited
 
     private void btn_logoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_logoutMouseEntered
-        btn_logout.setBackground(Color.BLACK);
+        btn_logout.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_btn_logoutMouseEntered
 
     private void btn_logoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_logoutMouseExited
-        btn_logout.setBackground(new Color(68, 68, 68));
+        btn_logout.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_btn_logoutMouseExited
 
     private void btn_menuComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuComprasMouseClicked
@@ -4904,19 +4927,19 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_menuComprasMouseClicked
 
     private void btn_menuComprasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuComprasMouseEntered
-        btn_menuCompras.setBackground(Color.BLACK);
+        btn_menuCompras.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_btn_menuComprasMouseEntered
 
     private void btn_menuComprasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuComprasMouseExited
-        btn_menuCompras.setBackground(new Color(68, 68, 68));
+        btn_menuCompras.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_btn_menuComprasMouseExited
 
     private void btn_listarProductosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_listarProductosMouseEntered
-        btn_listarProductos.setBackground(Color.BLACK);
+        btn_listarProductos.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_btn_listarProductosMouseEntered
 
     private void btn_listarProductosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_listarProductosMouseExited
-        btn_listarProductos.setBackground(new Color(68, 68, 68));
+        btn_listarProductos.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_btn_listarProductosMouseExited
 
     private void hventaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hventaMouseClicked
@@ -4926,37 +4949,37 @@ public class Main extends javax.swing.JFrame {
 
     private void invMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_invMouseEntered
         // TODO add your handling code here:
-        inv.setBackground(Color.BLACK);
+        inv.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_invMouseEntered
 
     private void aprodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aprodMouseEntered
         // TODO add your handling code here:
-        aprod.setBackground(Color.BLACK);
+        aprod.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_aprodMouseEntered
 
     private void mprodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mprodMouseEntered
         // TODO add your handling code here:
-        mprod.setBackground(Color.BLACK);
+        mprod.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_mprodMouseEntered
 
     private void eprodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eprodMouseEntered
         // TODO add your handling code here:
-        eprod.setBackground(Color.BLACK);
+        eprod.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_eprodMouseEntered
 
     private void gfacturaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gfacturaMouseEntered
         // TODO add your handling code here:
-        gfactura.setBackground(Color.BLACK);
+        gfactura.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_gfacturaMouseEntered
 
     private void cpedidoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cpedidoMouseEntered
         // TODO add your handling code here:
-        cpedido.setBackground(Color.BLACK);
+        cpedido.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_cpedidoMouseEntered
 
     private void vlogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vlogoutMouseEntered
         // TODO add your handling code here:
-        vlogout.setBackground(Color.BLACK);
+        vlogout.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_vlogoutMouseEntered
 
     private void jPanel5AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel5AncestorAdded
@@ -4965,47 +4988,47 @@ public class Main extends javax.swing.JFrame {
 
     private void hventaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hventaMouseEntered
         // TODO add your handling code here:
-        hventa.setBackground(Color.BLACK);
+        hventa.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_hventaMouseEntered
 
     private void hventaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hventaMouseExited
         // TODO add your handling code here:
-        hventa.setBackground(new Color(68, 68, 68));
+        hventa.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_hventaMouseExited
 
     private void invMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_invMouseExited
         // TODO add your handling code here:
-        inv.setBackground(new Color(68, 68, 68));
+        inv.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_invMouseExited
 
     private void aprodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aprodMouseExited
         // TODO add your handling code here:
-        aprod.setBackground(new Color(68, 68, 68));
+        aprod.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_aprodMouseExited
 
     private void mprodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mprodMouseExited
         // TODO add your handling code here:
-        mprod.setBackground(new Color(68, 68, 68));
+        mprod.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_mprodMouseExited
 
     private void eprodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eprodMouseExited
         // TODO add your handling code here:
-        eprod.setBackground(new Color(68, 68, 68));
+        eprod.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_eprodMouseExited
 
     private void gfacturaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gfacturaMouseExited
         // TODO add your handling code here:
-        gfactura.setBackground(new Color(68, 68, 68));
+        gfactura.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_gfacturaMouseExited
 
     private void cpedidoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cpedidoMouseExited
         // TODO add your handling code here:
-        cpedido.setBackground(new Color(68, 68, 68));
+        cpedido.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_cpedidoMouseExited
 
     private void vlogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vlogoutMouseExited
         // TODO add your handling code here:
-        vlogout.setBackground(new Color(68, 68, 68));
+        vlogout.setBackground(new Color(22,56,242));
     }//GEN-LAST:event_vlogoutMouseExited
 
     private void crear_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_rMouseClicked
@@ -5156,6 +5179,46 @@ public class Main extends javax.swing.JFrame {
                 java.util.Arrays.fill(password, ' ');
     }//GEN-LAST:event_bt_loginMouseClicked
 
+    private void btn_eliminarProductoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_eliminarProductoMouseEntered
+        btn_eliminarProducto.setBackground(new Color(0, 35, 182));
+    }//GEN-LAST:event_btn_eliminarProductoMouseEntered
+
+    private void btn_eliminarProductoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_eliminarProductoMouseExited
+        btn_eliminarProducto.setBackground(new Color(22,56,242));
+    }//GEN-LAST:event_btn_eliminarProductoMouseExited
+
+    private void generarfacturaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_generarfacturaMouseEntered
+        generarfactura.setBackground(new Color(0, 35, 182));
+    }//GEN-LAST:event_generarfacturaMouseEntered
+
+    private void generarfacturaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_generarfacturaMouseExited
+        generarfactura.setBackground(new Color(22,56,242));
+    }//GEN-LAST:event_generarfacturaMouseExited
+
+    private void btn_comprarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_comprarMouseEntered
+        btn_comprar.setBackground(new Color(0, 35, 182));
+    }//GEN-LAST:event_btn_comprarMouseEntered
+
+    private void btn_comprarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_comprarMouseExited
+        btn_comprar.setBackground(new Color(22,56,242));
+    }//GEN-LAST:event_btn_comprarMouseExited
+
+    private void jPanel15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseEntered
+        jPanel15.setBackground(new Color(0, 35, 182));
+    }//GEN-LAST:event_jPanel15MouseEntered
+
+    private void jPanel15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel15MouseExited
+        jPanel15.setBackground(new Color(22,56,242));
+    }//GEN-LAST:event_jPanel15MouseExited
+
+    private void jPanel12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseEntered
+        jPanel12.setBackground(new Color(0, 35, 182));
+    }//GEN-LAST:event_jPanel12MouseEntered
+
+    private void jPanel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel12MouseExited
+        jPanel12.setBackground(new Color(22,56,242));
+    }//GEN-LAST:event_jPanel12MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -5167,7 +5230,7 @@ public class Main extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -5231,6 +5294,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel bt_login;
     private javax.swing.JPanel btn_buscarProducto;
     private javax.swing.JPanel btn_comprar;
+    private javax.swing.JPanel btn_eliminarProducto;
     private javax.swing.JPanel btn_listarProductos;
     private javax.swing.JPanel btn_logout;
     private javax.swing.JPanel btn_menuCompras;
@@ -5476,7 +5540,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
