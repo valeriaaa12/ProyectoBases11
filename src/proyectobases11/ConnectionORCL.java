@@ -35,12 +35,12 @@ public class ConnectionORCL {
         // 3. Create a CallableStatement for executing the function
         callableStmt = conn.prepareCall(functionCall);
 
-        // 4. Register the return type (VARCHAR2 in this case)
+        
         callableStmt.registerOutParameter(1, Types.VARCHAR);
-        // 5. Set input parameters (p_idT, p_nombre, p_horario)
-        callableStmt.setInt(2, a);                // p_idT (integer)
-        callableStmt.setString(3, b);     // p_nombre (string)
-        callableStmt.setString(4, c); // p_horario (string)
+        
+        callableStmt.setInt(2, a);                
+        callableStmt.setString(3, b);     
+        callableStmt.setString(4, c); 
 
         // 6. Execute the function
         callableStmt.execute();
@@ -65,7 +65,26 @@ public class ConnectionORCL {
         String result = callableSTM.getString(1);
         JOptionPane.showMessageDialog(null, result);
     }
-
+    
+    public void insertIntoTabla_Producto(int upc, int numero, String Nombre,int tam,String embalaje,String marca, double precio) throws SQLException{
+        CallableStatement callableSTM = null;
+        String callfuncion = "{ ? = call insert_into_productos(?, ?, ?, ?, ?, ?, ?) }";
+        callableSTM = conn.prepareCall(callfuncion);
+        callableSTM.registerOutParameter(1, Types.VARCHAR);
+        callableSTM.setInt(2, upc);
+        callableSTM.setInt(3, numero);
+        callableSTM.setString(4, Nombre);
+        callableSTM.setInt(5, tam);
+        callableSTM.setString(6, embalaje);
+        callableSTM.setString(7, marca);
+        callableSTM.setDouble(8, precio);
+        callableSTM.execute();
+        String result = callableSTM.getString(1);
+        JOptionPane.showMessageDialog(null, result);
+        
+        
+    }
+    
     public void modify() {
 
     }
@@ -105,22 +124,22 @@ public class ConnectionORCL {
         callableStatement.registerOutParameter(1, Types.REF_CURSOR);
         callableStatement.execute();
 
-        // Retrieve the result set
+        
         ResultSet resultSet = (ResultSet) callableStatement.getObject(1);
         ResultSetMetaData metaData = resultSet.getMetaData();
         int columnCount = metaData.getColumnCount();
 
-        // Create column names array
+        
         String[] columnNames = new String[columnCount];
         for (int i = 1; i <= columnCount; i++) {
             columnNames[i - 1] = metaData.getColumnName(i);
         }
 
-        // Set up the table model
+       
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);
         tabla.setModel(model);
 
-        // Populate the table model with rows from the result set
+       
         while (resultSet.next()) {
             Object[] row = new Object[columnCount];
             for (int i = 1; i <= columnCount; i++) {
