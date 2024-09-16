@@ -28,27 +28,80 @@ public class ConnectionORCL {
     }
 
     public void insertIntoTabla_Tienda(int a, String b, String c) throws SQLException {
-        // 2. Prepare the PL/SQL function call
+
         CallableStatement callableStmt = null;
         String functionCall = "{ ? = call insert_into_tiendas(?, ?, ?) }";
 
-        // 3. Create a CallableStatement for executing the function
         callableStmt = conn.prepareCall(functionCall);
 
-        
         callableStmt.registerOutParameter(1, Types.VARCHAR);
-        
-        callableStmt.setInt(2, a);                
-        callableStmt.setString(3, b);     
-        callableStmt.setString(4, c); 
 
-        // 6. Execute the function
+        callableStmt.setInt(2, a);
+        callableStmt.setString(3, b);
+        callableStmt.setString(4, c);
+
         callableStmt.execute();
 
-        // 7. Retrieve the returned message from the function
         String result = callableStmt.getString(1);
-        System.out.println("Function Result: " + result);
+        JOptionPane.showMessageDialog(null, result);
 
+    }
+
+    public void insertIntoTabla_Vendedor(int a, String b, String c, String d) throws SQLException {
+
+        CallableStatement callableStmt = null;
+        String functionCall = "{ ? = call insert_into_vendedores(?, ?, ?, ?) }";
+
+        callableStmt = conn.prepareCall(functionCall);
+
+        callableStmt.registerOutParameter(1, Types.VARCHAR);
+
+        callableStmt.setInt(2, a);
+        callableStmt.setString(3, b);
+        callableStmt.setString(4, c);
+        callableStmt.setString(5, d);
+
+        callableStmt.execute();
+
+        String result = callableStmt.getString(1);
+        JOptionPane.showMessageDialog(null, result);
+
+    }
+
+    public void updateTiendas(int id, String n_nombre, String n_horario) throws SQLException {
+        CallableStatement callableStatement = conn.prepareCall("{ ? = call update_tienda(?, ?, ?) }");
+
+        callableStatement.registerOutParameter(1, Types.VARCHAR);
+
+        callableStatement.setInt(2, id);
+        callableStatement.setString(3, n_nombre);
+        callableStatement.setString(4, n_horario);
+
+        callableStatement.execute();
+
+        String result = callableStatement.getString(1);
+
+        JOptionPane.showMessageDialog(null, result);
+    }
+
+    public void updateProducto(int upc, int numero, String Nombre, int tam, String embalaje, String marca, double precio) throws SQLException {
+        CallableStatement callableStatement = conn.prepareCall("{ ? = call update_producto(?, ?, ?, ?, ?, ?, ?) }");
+
+        callableStatement.registerOutParameter(1, Types.VARCHAR);
+
+        callableStatement.setInt(2, upc);
+        callableStatement.setInt(3, numero);
+        callableStatement.setString(4, Nombre);
+        callableStatement.setInt(5, tam);
+        callableStatement.setString(6, embalaje);
+        callableStatement.setString(7, marca);
+        callableStatement.setDouble(8, precio);
+
+        callableStatement.execute();
+
+        String result = callableStatement.getString(1);
+
+        JOptionPane.showMessageDialog(null, result);
     }
 
     public void insertIntoTabla_Cliente(int id, String namae, String mail, String password, String usern) throws SQLException {
@@ -65,8 +118,8 @@ public class ConnectionORCL {
         String result = callableSTM.getString(1);
         JOptionPane.showMessageDialog(null, result);
     }
-    
-    public void insertIntoTabla_Producto(int upc, int numero, String Nombre,int tam,String embalaje,String marca, double precio) throws SQLException{
+
+    public void insertIntoTabla_Producto(int upc, int numero, String Nombre, int tam, String embalaje, String marca, double precio) throws SQLException {
         CallableStatement callableSTM = null;
         String callfuncion = "{ ? = call insert_into_productos(?, ?, ?, ?, ?, ?, ?) }";
         callableSTM = conn.prepareCall(callfuncion);
@@ -81,14 +134,13 @@ public class ConnectionORCL {
         callableSTM.execute();
         String result = callableSTM.getString(1);
         JOptionPane.showMessageDialog(null, result);
-        
-        
+
     }
-    
-    public void generarFactura(int numero, int idt, int idc, java.util.Date fecha, double subtotal, String ISV, double total )throws SQLException{
+
+    public void generarFactura(int numero, int idt, int idc, java.util.Date fecha, double subtotal, String ISV, double total) throws SQLException {
         CallableStatement callableSTM = null;
         fecha = new java.util.Date();
-        
+
         String callfuncion = "{ ? = call insert_into_factura(?, ?, ?, ?, ?, ?, ?) }";
         callableSTM = conn.prepareCall(callfuncion);
         callableSTM.registerOutParameter(1, Types.VARCHAR);
@@ -103,35 +155,51 @@ public class ConnectionORCL {
         String result = callableSTM.getString(1);
         JOptionPane.showMessageDialog(null, result);
     }
-    
+
     public void modify() {
 
     }
 
-    public String[] search(String functionOracle, String searchUsername) throws SQLException {
 
+    public String[] search(String functionOracle, String searchUsername, String parameter) throws SQLException {
         CallableStatement callableStatement = null;
         ResultSet resultSet = null;
-        callableStatement = conn.prepareCall("{ ? = call " + functionOracle + "(?) }");
-        callableStatement.registerOutParameter(1, Types.REF_CURSOR);
-        callableStatement.setString(2, searchUsername);
-        callableStatement.execute();
-        resultSet = (ResultSet) callableStatement.getObject(1);
-        String[] result = new String[5];
-        if (resultSet.next()) {
+        String[] result = new String[5]; // Adjust array size as needed
+        
+        try {
             
-            result[0] = resultSet.getString("username");
-            result[1]= resultSet.getString("pass");
-            int a = resultSet.getInt("idC");
-            result[2] = "";
-            result[2] += a;
-            return result;
-        } else {
-            result[0] = resultSet.getString("message"); 
-            
-            return result;
-        }
+            callableStatement = conn.prepareCall("{ ? = call " + functionOracle + "(?) }");
+            callableStatement.registerOutParameter(1, Types.REF_CURSOR); // Register REF_CURSOR
+            callableStatement.setString(2, searchUsername); // Set the input parameter
+            callableStatement.execute(); // Execute the function
 
+          
+            resultSet = (ResultSet) callableStatement.getObject(1);
+
+        
+            if (resultSet.next()) {
+              
+                if (resultSet.getMetaData().getColumnCount() > 1) {
+                    result[0] = resultSet.getString("username");
+                    result[1] = resultSet.getString("pass");
+                    result[2] = Integer.toString(resultSet.getInt(parameter));
+                } else {
+                    // Handle case when message is returned
+                    result[0] = resultSet.getString("message");
+                }
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            throw ex;
+        } finally {
+            if (resultSet != null) {
+                resultSet.close();
+            }
+            if (callableStatement != null) {
+                callableStatement.close();
+            }
+        }
+        return result;
     }
 
     public void setUsernameInContext(String username) throws SQLException {
@@ -146,22 +214,18 @@ public class ConnectionORCL {
         callableStatement.registerOutParameter(1, Types.REF_CURSOR);
         callableStatement.execute();
 
-        
         ResultSet resultSet = (ResultSet) callableStatement.getObject(1);
         ResultSetMetaData metaData = resultSet.getMetaData();
         int columnCount = metaData.getColumnCount();
 
-        
         String[] columnNames = new String[columnCount];
         for (int i = 1; i <= columnCount; i++) {
             columnNames[i - 1] = metaData.getColumnName(i);
         }
 
-       
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);
         tabla.setModel(model);
 
-       
         while (resultSet.next()) {
             Object[] row = new Object[columnCount];
             for (int i = 1; i <= columnCount; i++) {
