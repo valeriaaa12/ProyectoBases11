@@ -656,6 +656,11 @@ public class Main extends javax.swing.JFrame {
         jLabel113.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel113.setForeground(new java.awt.Color(255, 255, 255));
         jLabel113.setText("Historial de Ventas");
+        jLabel113.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel113MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout hventaLayout = new javax.swing.GroupLayout(hventa);
         hventa.setLayout(hventaLayout);
@@ -695,6 +700,11 @@ public class Main extends javax.swing.JFrame {
         jLabel112.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel112.setForeground(new java.awt.Color(255, 255, 255));
         jLabel112.setText("Inventario Disponible");
+        jLabel112.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel112MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout invLayout = new javax.swing.GroupLayout(inv);
         inv.setLayout(invLayout);
@@ -2824,6 +2834,11 @@ public class Main extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("ELIMINAR SELECCIONADO");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jPanel45.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 220, 100));
 
         javax.swing.GroupLayout DelPLayout = new javax.swing.GroupLayout(DelP.getContentPane());
@@ -2834,7 +2849,7 @@ public class Main extends javax.swing.JFrame {
         );
         DelPLayout.setVerticalGroup(
             DelPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
         );
 
         jPanel40.setBackground(new java.awt.Color(255, 255, 255));
@@ -5407,9 +5422,14 @@ public class Main extends javax.swing.JFrame {
     private void mprodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mprodMouseClicked
         // TODO add your handling code here:
         ModProd.pack();
-        ModProd.setModal(true);
+        
         ModProd.setLocationRelativeTo(this);
         ModProd.setVisible(true);
+        try {
+            this.cnx.fJTable1(modtablaprod, "get_productos");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_mprodMouseClicked
 
     private void eprodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eprodMouseClicked
@@ -5830,6 +5850,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jLabel186MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel186MouseClicked
         // TODO add your handling code here:
+        GestionarP.setVisible(false);
         DelP.pack();
         DelP.setVisible(true);
         try {
@@ -5838,6 +5859,44 @@ public class Main extends javax.swing.JFrame {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jLabel186MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        int selectedRow = delvendedortable.getSelectedRow();
+
+        if (selectedRow != -1) {
+            // Get data from the selected row
+            Object id = delvendedortable.getValueAt(selectedRow, 0);
+            int idS = ((BigDecimal) id).intValue();
+            try {
+                this.cnx.deletefromtable("delete_vendedor", idS);
+                ((DefaultTableModel) delvendedortable.getModel()).removeRow(selectedRow);
+            } catch (SQLException ex) {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        DelP.setVisible(false);
+        GestionarP.setVisible(true);
+
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jLabel112MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel112MouseClicked
+        try {
+            // TODO add your handling code here:
+            this.cnx.fJTable1(jTable2, "get_productos");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel112MouseClicked
+
+    private void jLabel113MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel113MouseClicked
+        try {
+            // TODO add your handling code here:
+            this.cnx.fJTable1(jTable2, "get_historialventas");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel113MouseClicked
 
     private void creaciondeCliente() {
 
