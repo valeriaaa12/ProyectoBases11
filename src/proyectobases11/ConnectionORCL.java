@@ -85,6 +85,25 @@ public class ConnectionORCL {
         
     }
     
+    public void generarFactura(int numero, int idt, int idc, java.util.Date fecha, double subtotal, String ISV, double total )throws SQLException{
+        CallableStatement callableSTM = null;
+        fecha = new java.util.Date();
+        
+        String callfuncion = "{ ? = call insert_into_factura(?, ?, ?, ?, ?, ?, ?) }";
+        callableSTM = conn.prepareCall(callfuncion);
+        callableSTM.registerOutParameter(1, Types.VARCHAR);
+        callableSTM.setInt(2, numero);
+        callableSTM.setInt(3, idt);
+        callableSTM.setInt(4, idc);
+        callableSTM.setDate(5, new Date(fecha.getTime()));
+        callableSTM.setDouble(6, subtotal);
+        callableSTM.setString(7, ISV);
+        callableSTM.setDouble(8, total);
+        callableSTM.execute();
+        String result = callableSTM.getString(1);
+        JOptionPane.showMessageDialog(null, result);
+    }
+    
     public void modify() {
 
     }
@@ -103,6 +122,9 @@ public class ConnectionORCL {
             
             result[0] = resultSet.getString("username");
             result[1]= resultSet.getString("pass");
+            int a = resultSet.getInt("idC");
+            result[2] = "";
+            result[2] += a;
             return result;
         } else {
             result[0] = resultSet.getString("message"); 
