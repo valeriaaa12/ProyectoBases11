@@ -2731,6 +2731,8 @@ public class Main extends javax.swing.JFrame {
 
         jPanel44.setBackground(new java.awt.Color(0, 0, 204));
 
+        jLabel205.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel205.setForeground(new java.awt.Color(255, 255, 255));
         jLabel205.setText("MODIFICAR VENDEDORES");
 
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
@@ -2787,6 +2789,11 @@ public class Main extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(51, 51, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("MODIFICAR VENDEDOR");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jPanel18.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 340, 90));
 
         javax.swing.GroupLayout ModVendedorLayout = new javax.swing.GroupLayout(ModVendedor.getContentPane());
@@ -3304,6 +3311,11 @@ public class Main extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Inventario de Productos");
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout i_productosLayout = new javax.swing.GroupLayout(i_productos);
         i_productos.setLayout(i_productosLayout);
@@ -3344,6 +3356,11 @@ public class Main extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Compras por Cliente");
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout c_clienteLayout = new javax.swing.GroupLayout(c_cliente);
         c_cliente.setLayout(c_clienteLayout);
@@ -3384,6 +3401,11 @@ public class Main extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Historial de ventas por tienda.");
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout h_ventasLayout = new javax.swing.GroupLayout(h_ventas);
         h_ventas.setLayout(h_ventasLayout);
@@ -3425,6 +3447,11 @@ public class Main extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("20 Productos mas vendidos por tienda");
+        jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel20MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout p_vendidoTiendaLayout = new javax.swing.GroupLayout(p_vendidoTienda);
         p_vendidoTienda.setLayout(p_vendidoTiendaLayout);
@@ -3453,6 +3480,9 @@ public class Main extends javax.swing.JFrame {
         p_vendidopais.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         p_vendidopais.setPreferredSize(new java.awt.Dimension(193, 28));
         p_vendidopais.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                p_vendidopaisMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 p_vendidopaisMouseEntered(evt);
             }
@@ -5504,6 +5534,14 @@ public class Main extends javax.swing.JFrame {
 
     private void ModCliente1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModCliente1MouseClicked
         // TODO add your handling code here:
+        ModVendedor.pack();
+        GestionarP.setVisible(false);
+        ModVendedor.setVisible(true);
+        try {
+            this.cnx.fJTable1(jTable3, "get_vendedores");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_ModCliente1MouseClicked
 
     private void DelCliente1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DelCliente1MouseClicked
@@ -5801,7 +5839,7 @@ public class Main extends javax.swing.JFrame {
     private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
         try {
             // TODO add your handling code here:
-            this.cnx.fJTable1(jTable1, "get_bitacora");
+            this.cnx.fJTable1(pruebaxd, "get_bitacora");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -5930,6 +5968,58 @@ public class Main extends javax.swing.JFrame {
     private void delProductoTABLEKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_delProductoTABLEKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_delProductoTABLEKeyPressed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        try {
+            // TODO add your handling code here:
+            this.cnx.fJTable1(jTable1, "get_inventario");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        try {
+            this.cnx.fJTable1(jTable1, "get_ventas_cliente");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            this.cnx.fJTable1(jTable1, "get_historialventas");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel18MouseClicked
+
+    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            this.cnx.fJTable1(jTable1, "get_TOP20VENDIDOS");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void p_vendidopaisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p_vendidopaisMouseClicked
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            this.cnx.fJTable1(jTable1, "GET_TOP20PAIS");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_p_vendidopaisMouseClicked
 
     private void creaciondeCliente() {
 
