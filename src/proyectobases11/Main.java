@@ -309,6 +309,12 @@ public class Main extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         DelP = new javax.swing.JDialog();
+        jPanel45 = new javax.swing.JPanel();
+        jPanel46 = new javax.swing.JPanel();
+        jLabel211 = new javax.swing.JLabel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        delvendedortable = new javax.swing.JTable();
+        jButton2 = new javax.swing.JButton();
         Venta = new javax.swing.JDialog();
         jPanel40 = new javax.swing.JPanel();
         jLabel192 = new javax.swing.JLabel();
@@ -2563,6 +2569,11 @@ public class Main extends javax.swing.JFrame {
         jLabel186.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
         jLabel186.setForeground(new java.awt.Color(255, 255, 255));
         jLabel186.setText("Eliminar Vendedor");
+        jLabel186.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel186MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout DelCliente1Layout = new javax.swing.GroupLayout(DelCliente1);
         DelCliente1.setLayout(DelCliente1Layout);
@@ -2769,15 +2780,61 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel45.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel45.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel46.setBackground(new java.awt.Color(51, 51, 255));
+
+        jLabel211.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel211.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel211.setText("ELIMINAR VENDEDOR");
+
+        javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
+        jPanel46.setLayout(jPanel46Layout);
+        jPanel46Layout.setHorizontalGroup(
+            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel46Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jLabel211, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(630, Short.MAX_VALUE))
+        );
+        jPanel46Layout.setVerticalGroup(
+            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel46Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel211, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        jPanel45.add(jPanel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, -1));
+
+        delvendedortable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane14.setViewportView(delvendedortable);
+
+        jPanel45.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+
+        jButton2.setBackground(new java.awt.Color(51, 51, 255));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("ELIMINAR SELECCIONADO");
+        jPanel45.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 220, 100));
+
         javax.swing.GroupLayout DelPLayout = new javax.swing.GroupLayout(DelP.getContentPane());
         DelP.getContentPane().setLayout(DelPLayout);
         DelPLayout.setHorizontalGroup(
             DelPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         DelPLayout.setVerticalGroup(
             DelPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel40.setBackground(new java.awt.Color(255, 255, 255));
@@ -5771,6 +5828,17 @@ public class Main extends javax.swing.JFrame {
         CrearProd.setVisible(true);
     }//GEN-LAST:event_jLabel114MouseClicked
 
+    private void jLabel186MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel186MouseClicked
+        // TODO add your handling code here:
+        DelP.pack();
+        DelP.setVisible(true);
+        try {
+            this.cnx.fJTable1(delvendedortable, "get_vendedores");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel186MouseClicked
+
     private void creaciondeCliente() {
 
     }
@@ -5875,6 +5943,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel crear_r1;
     private javax.swing.JTable delProductoTABLE;
     private javax.swing.JTable delTiendaTABLE;
+    private javax.swing.JTable delvendedortable;
     private javax.swing.JPanel eliminar_b;
     private javax.swing.JPanel eliminar_b1;
     private javax.swing.JPanel eliminar_r;
@@ -5899,6 +5968,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel inv;
     private javax.swing.JTextField isv;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -6025,6 +6095,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel209;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel210;
+    private javax.swing.JLabel jLabel211;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
@@ -6149,6 +6220,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel42;
     private javax.swing.JPanel jPanel43;
     private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
@@ -6159,6 +6232,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
