@@ -1702,6 +1702,11 @@ public class Main extends javax.swing.JFrame {
         jLabel157.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
         jLabel157.setForeground(new java.awt.Color(255, 255, 255));
         jLabel157.setText("Eliminar Producto");
+        jLabel157.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel157MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout btn_eliminarProductoLayout = new javax.swing.GroupLayout(btn_eliminarProducto);
         btn_eliminarProducto.setLayout(btn_eliminarProductoLayout);
@@ -1736,6 +1741,11 @@ public class Main extends javax.swing.JFrame {
 
             }
         ));
+        delProductoTABLE.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                delProductoTABLEKeyPressed(evt);
+            }
+        });
         jScrollPane9.setViewportView(delProductoTABLE);
 
         jPanel16.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 690, 310));
@@ -5897,6 +5907,29 @@ public class Main extends javax.swing.JFrame {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jLabel113MouseClicked
+
+    private void jLabel157MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel157MouseClicked
+        // TODO add your handling code here:
+        int selectedRow = delProductoTABLE.getSelectedRow();
+
+        if (selectedRow != -1) {
+            // Get data from the selected row
+            Object id = delProductoTABLE.getValueAt(selectedRow, 0);
+            int idS = ((BigDecimal) id).intValue();
+            try {
+                this.cnx.deletefromtable("delete_producto", idS);
+                ((DefaultTableModel) delProductoTABLE.getModel()).removeRow(selectedRow);
+            } catch (SQLException ex) {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+        
+    }//GEN-LAST:event_jLabel157MouseClicked
+
+    private void delProductoTABLEKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_delProductoTABLEKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_delProductoTABLEKeyPressed
 
     private void creaciondeCliente() {
 
