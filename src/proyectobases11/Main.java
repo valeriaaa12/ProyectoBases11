@@ -5710,20 +5710,24 @@ public class Main extends javax.swing.JFrame {
 
     private void addCliente1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addCliente1MouseClicked
         // TODO add your handling code here:
-        int idCliente = Integer.parseInt(idc1.getText());
-        String nameCliente = namec1.getText();
-        String emailCliente = namec7.getText();
-        String userCliente = namec6.getText();
-        String passCliente = namec.getText();
         try {
-            cnx.insertIntoTabla_Cliente(idCliente, nameCliente, emailCliente, passCliente, userCliente);
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        try {
+            cnx.insertIntoTabla_Cliente(
+                    Integer.parseInt(idc1.getText()),
+                    namec1.getText(),
+                    namec7.getText(),
+                    namec.getText(),
+                    namec6.getText()
+            );
             this.cnx.fJTable1(clientsEliminateTable, "get_clientes");
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumberFormatException e) {
+            // Manejo de errores de formato numérico con JOptionPane
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido para el ID del cliente.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException e) {
+            // Manejo de errores SQL con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error en operaciones de base de datos: " + e.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            // Manejo de cualquier otra Exception con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
 
 
@@ -6010,11 +6014,20 @@ public class Main extends javax.swing.JFrame {
         String nom = namec5.getText();
         String pass = namec4.getText();
         String user = namec10.getText();
+
         try {
             this.cnx.insertIntoTabla_Vendedor(idV, nom, pass, user);
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumberFormatException e) {
+
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido para el ID del vendedor.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException e) {
+
+            JOptionPane.showMessageDialog(null, "Error en operaciones de base de datos: " + e.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
+
 
     }//GEN-LAST:event_jLabel188MouseClicked
 
@@ -6113,10 +6126,18 @@ public class Main extends javax.swing.JFrame {
         String usern = jTextField4.getText();
 
         try {
+            // Actualizar la información del vendedor en la base de datos y refrescar la tabla de vendedores
             this.cnx.updateVendors(idv, nom, pass, usern);
             this.cnx.fJTable1(jTable3, "get_vendedores");
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumberFormatException e) {
+            // Manejo de errores de formato numérico con JOptionPane
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido para el ID del vendedor.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException e) {
+            // Manejo de errores SQL con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error al actualizar la información del vendedor en la base de datos: " + e.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            // Manejo de cualquier otra Exception con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
 
 
@@ -6176,12 +6197,22 @@ public class Main extends javax.swing.JFrame {
         String correo = namec8.getText();
         String pass = namec2.getText();
         String usern = namec9.getText();
+
         try {
             this.cnx.updateCliente(id, nomb, correo, pass, usern);
             this.cnx.fJTable1(jTable4, "get_clientes");
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumberFormatException e) {
+            // Manejo de errores de formato numérico con JOptionPane
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido para el ID del cliente.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException e) {
+            // Manejo de errores SQL con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error en operaciones de base de datos: " + e.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            // Manejo de cualquier otra Exception con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
+
+
     }//GEN-LAST:event_jLabel176MouseClicked
 
     private void t_ventasyearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t_ventasyearMouseClicked
