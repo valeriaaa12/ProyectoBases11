@@ -98,8 +98,6 @@ public class Main extends javax.swing.JFrame {
         jSeparator12 = new javax.swing.JSeparator();
         gfactura = new javax.swing.JPanel();
         jLabel118 = new javax.swing.JLabel();
-        cpedido = new javax.swing.JPanel();
-        jLabel119 = new javax.swing.JLabel();
         jLabel120 = new javax.swing.JLabel();
         jSeparator13 = new javax.swing.JSeparator();
         vlogout = new javax.swing.JPanel();
@@ -897,7 +895,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(gfacturaLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jLabel118)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         gfacturaLayout.setVerticalGroup(
             gfacturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -905,38 +903,6 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel118)
                 .addContainerGap(8, Short.MAX_VALUE))
-        );
-
-        cpedido.setBackground(new java.awt.Color(22, 56, 242));
-        cpedido.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        cpedido.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                cpedidoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                cpedidoMouseExited(evt);
-            }
-        });
-
-        jLabel119.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel119.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel119.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel119.setText("Pedidos en Curso");
-
-        javax.swing.GroupLayout cpedidoLayout = new javax.swing.GroupLayout(cpedido);
-        cpedido.setLayout(cpedidoLayout);
-        cpedidoLayout.setHorizontalGroup(
-            cpedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cpedidoLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
-        cpedidoLayout.setVerticalGroup(
-            cpedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cpedidoLayout.createSequentialGroup()
-                .addComponent(jLabel119)
-                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         jLabel120.setBackground(new java.awt.Color(255, 255, 255));
@@ -993,7 +959,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                         .addComponent(jLabel95)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
@@ -1028,9 +994,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(gfactura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cpedido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(gfactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jLabel120)))
@@ -1038,7 +1002,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(vlogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1070,8 +1034,6 @@ public class Main extends javax.swing.JFrame {
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel5Layout.createSequentialGroup()
                                     .addComponent(gfactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(cpedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel120))
                                 .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -3226,7 +3188,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(eliminar_rLayout.createSequentialGroup()
                         .addComponent(jLabel6)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 6, Short.MAX_VALUE))))
         );
 
         jSeparator1.setBackground(new java.awt.Color(22, 56, 242));
@@ -4032,7 +3994,7 @@ public class Main extends javax.swing.JFrame {
                                                 .addComponent(modificar_r, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(5, 5, 5)
                                                 .addComponent(eliminar_r, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel2))
                                             .addGroup(jPanel10Layout.createSequentialGroup()
                                                 .addComponent(modificar_b, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -5465,11 +5427,6 @@ public class Main extends javax.swing.JFrame {
         gfactura.setBackground(new Color(0, 35, 182));
     }//GEN-LAST:event_gfacturaMouseEntered
 
-    private void cpedidoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cpedidoMouseEntered
-        // TODO add your handling code here:
-        cpedido.setBackground(new Color(0, 35, 182));
-    }//GEN-LAST:event_cpedidoMouseEntered
-
     private void vlogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vlogoutMouseEntered
         // TODO add your handling code here:
         vlogout.setBackground(new Color(0, 35, 182));
@@ -5513,11 +5470,6 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         gfactura.setBackground(new Color(22, 56, 242));
     }//GEN-LAST:event_gfacturaMouseExited
-
-    private void cpedidoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cpedidoMouseExited
-        // TODO add your handling code here:
-        cpedido.setBackground(new Color(22, 56, 242));
-    }//GEN-LAST:event_cpedidoMouseExited
 
     private void vlogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vlogoutMouseExited
         // TODO add your handling code here:
@@ -6355,7 +6307,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel c_cliente;
     private javax.swing.JPanel c_cliente1;
     private javax.swing.JTable clientsEliminateTable;
-    private javax.swing.JPanel cpedido;
     private javax.swing.JPanel crear_b;
     private javax.swing.JPanel crear_b1;
     private javax.swing.JPanel crear_r;
@@ -6409,7 +6360,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel116;
     private javax.swing.JLabel jLabel117;
     private javax.swing.JLabel jLabel118;
-    private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
