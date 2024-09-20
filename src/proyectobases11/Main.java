@@ -6009,13 +6009,14 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel147MouseClicked
 
     private void jLabel188MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel188MouseClicked
-        // TODO add your handling code here:
-        int idV = Integer.parseInt(idc3.getText());
-        String nom = namec5.getText();
-        String pass = namec4.getText();
-        String user = namec10.getText();
 
         try {
+            // TODO add your handling code here:
+            int idV = Integer.parseInt(idc3.getText());
+            String nom = namec5.getText();
+            String pass = namec4.getText();
+            String user = namec10.getText();
+
             this.cnx.insertIntoTabla_Vendedor(idV, nom, pass, user);
         } catch (NumberFormatException e) {
 
@@ -6120,12 +6121,12 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        int idv = Integer.parseInt(jTextField1.getText());
-        String nom = jTextField2.getText();
-        String pass = jTextField3.getText();
-        String usern = jTextField4.getText();
 
         try {
+            int idv = Integer.parseInt(jTextField1.getText());
+            String nom = jTextField2.getText();
+            String pass = jTextField3.getText();
+            String usern = jTextField4.getText();
             // Actualizar la información del vendedor en la base de datos y refrescar la tabla de vendedores
             this.cnx.updateVendors(idv, nom, pass, usern);
             this.cnx.fJTable1(jTable3, "get_vendedores");
@@ -6192,13 +6193,14 @@ public class Main extends javax.swing.JFrame {
 
     private void jLabel176MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel176MouseClicked
         // TODO add your handling code here:
-        int id = Integer.parseInt(idc2.getText());
-        String nomb = namec3.getText();
-        String correo = namec8.getText();
-        String pass = namec2.getText();
-        String usern = namec9.getText();
 
         try {
+            int id = Integer.parseInt(idc2.getText());
+            String nomb = namec3.getText();
+            String correo = namec8.getText();
+            String pass = namec2.getText();
+            String usern = namec9.getText();
+
             this.cnx.updateCliente(id, nomb, correo, pass, usern);
             this.cnx.fJTable1(jTable4, "get_clientes");
         } catch (NumberFormatException e) {
