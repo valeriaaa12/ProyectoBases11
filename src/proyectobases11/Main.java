@@ -5916,7 +5916,7 @@ public class Main extends javax.swing.JFrame {
     private void jLabel102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel102MouseClicked
         try {
             // TODO add your handling code here:
-            this.cnx.fJTable1(jt_vistaProductos, "get_productos");
+            this.cnx.fJTable1(jt_vistaProductos, "get_productos_disponibles");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
