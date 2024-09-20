@@ -5166,6 +5166,11 @@ public class Main extends javax.swing.JFrame {
         DelProd.setModal(true);
         DelProd.setLocationRelativeTo(this);
         DelProd.setVisible(true);
+        try {
+            this.cnx.fJTable1(delProductoTABLE, "get_productos");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_eliminar_rMouseClicked
 
     private void modificar_rMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar_rMouseExited
@@ -5520,6 +5525,11 @@ public class Main extends javax.swing.JFrame {
         DelTienda.setModal(true);
         DelTienda.setLocationRelativeTo(this);
         DelTienda.setVisible(true);
+        try {
+            this.cnx.fJTable1(delTiendaTABLE, "get_tiendas");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_eliminar_bMouseClicked
 
     private void bt_clientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_clientesMouseClicked
