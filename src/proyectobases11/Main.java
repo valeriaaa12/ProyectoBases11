@@ -34,7 +34,6 @@ public class Main extends javax.swing.JFrame {
     private ArrayList<Integer> carritoUPC = new ArrayList<>();
     private ArrayList<Integer> carritoPrices = new ArrayList<>();
     private int subtotalCarrito = 0;
-    
 
     public Main() throws SQLException, ClassNotFoundException {
         initComponents();
@@ -5366,20 +5365,19 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_logoutMouseExited
 
     private void btn_menuComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuComprasMouseClicked
-        
+
         try {
             this.cnx.fJTable1(seleccionarPRODUCTClient, "get_productos_disponibles");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
+
         jd_menuCompra.pack();
         jd_menuCompra.setModal(true);
         jd_menuCompra.setLocationRelativeTo(this);
         jd_menuCompra.setVisible(true);
-        
-        
+
+
     }//GEN-LAST:event_btn_menuComprasMouseClicked
 
     private void btn_menuComprasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuComprasMouseEntered
@@ -5501,7 +5499,7 @@ public class Main extends javax.swing.JFrame {
     private void mprodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mprodMouseClicked
         // TODO add your handling code here:
         ModProd.pack();
-        
+
         ModProd.setLocationRelativeTo(this);
         ModProd.setVisible(true);
         try {
@@ -5558,17 +5556,17 @@ public class Main extends javax.swing.JFrame {
 
     private void ModClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModClienteMouseClicked
         // TODO add your handling code here:
-       try {
+        try {
             this.cnx.fJTable1(jTable4, "get_clientes");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         ModC.pack();
         ModC.setModal(true);
         ModC.setLocationRelativeTo(this);
         ModC.setVisible(true);
-        
+
     }//GEN-LAST:event_ModClienteMouseClicked
 
     private void DelClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DelClienteMouseClicked
@@ -5623,12 +5621,12 @@ public class Main extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         Venta.pack();
         Venta.setModal(true);
         Venta.setLocationRelativeTo(this);
         Venta.setVisible(true);
-        
+
     }//GEN-LAST:event_gfacturaMouseClicked
 
     private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
@@ -5773,7 +5771,7 @@ public class Main extends javax.swing.JFrame {
             }
 
             // Client Login
-            String[] result = this.cnx.search("search_Cliente", un_login.getText(),"idC");
+            String[] result = this.cnx.search("search_Cliente", un_login.getText(), "idC");
             if (result != null && result.length > 0 && result[0].equalsIgnoreCase(un_login.getText())) {
                 if (result[1].equals(pss)) {
                     this.cnx.setUsernameInContext(result[0]);
@@ -5788,12 +5786,12 @@ public class Main extends javax.swing.JFrame {
                     return;
                 }
             }
-            String[] result2 = this.cnx.search("search_Vendedor", un_login.getText(),"idV");
+            String[] result2 = this.cnx.search("search_Vendedor", un_login.getText(), "idV");
             if (result2 != null && result2.length > 0 && result2[0].equalsIgnoreCase(un_login.getText())) {
-                
+
                 if (result2[1].equals(pss)) {
                     this.cnx.setUsernameInContext(result2[0]);
-                     System.out.println(result2[0]);
+                    System.out.println(result2[0]);
                     currentIDC = Integer.parseInt(result2[2]);
                     jFrame2.pack();
                     jFrame2.setVisible(true);
@@ -5812,16 +5810,25 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel160MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel160MouseClicked
-        // TODO add your handling code here:
-        int id = Integer.parseInt(upc4.getText());
+        int id = 0;
         String name = size3.getText();
         String horario = embalaje4.getText();
+
         try {
+            id = Integer.parseInt(upc4.getText());  // Intenta parsear el ID de un campo de texto
             this.cnx.insertIntoTabla_Tienda(id, name, horario);
             this.cnx.fJTable1(delTiendaTABLE, "get_tiendas");
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumberFormatException e) {
+            // Manejo de errores de formato numérico con JOptionPane
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido para el ID.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException e) {
+            // Manejo de errores SQL con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error al insertar en la base de datos: " + e.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            // Manejo de cualquier otra Exception con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
+
     }//GEN-LAST:event_jLabel160MouseClicked
 
     private void jLabel165MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel165MouseClicked
@@ -5845,32 +5852,42 @@ public class Main extends javax.swing.JFrame {
 
     private void jLabel131MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel131MouseClicked
         // TODO add your handling code here:
-        int upC = Integer.parseInt(upc2.getText());
-        int taman = Integer.parseInt(size1.getText());
-        String nombre = name2.getText();
-        int numero = 0;
-        String embalaj = embalaje2.getText();
-        double price = Double.parseDouble(price1.getText());
         try {
-            this.cnx.insertIntoTabla_Producto(upC, numero, nombre, taman, embalaj, marca1.getText(), price);
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            int upC = Integer.parseInt(upc2.getText());
+            int taman = Integer.parseInt(size1.getText());
+            String nombre = name2.getText();
+            int numero = 0;  // Asegúrate de que este valor sea correcto o sea asignado adecuadamente.
+            String embalaj = embalaje2.getText();
+            double price = Double.parseDouble(price1.getText());
+            String marca = marca1.getText();  // Asumiendo que `marca1` es accesible y se refiere a un campo de texto en tu GUI
+
+            this.cnx.insertIntoTabla_Producto(upC, numero, nombre, taman, embalaj, marca, price);
+        } catch (NumberFormatException e) {
+            // Manejo de errores de formato numérico con JOptionPane
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido en los campos correspondientes.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException e) {
+            // Manejo de errores SQL con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error al insertar en la base de datos: " + e.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            // Manejo de cualquier otra Exception con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
+
 
     }//GEN-LAST:event_jLabel131MouseClicked
 
     private void jLabel104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel104MouseClicked
         // TODO add your handling code here:
-        if(TIENDASCLIENTE.getSelectedRow() == -1){
+        if (TIENDASCLIENTE.getSelectedRow() == -1) {
             JOptionPane.showMessageDialog(null, "Debe seleccionar una tienda y un producto");
             return;
         }
-        
-        if(carrito.isEmpty()){
+
+        if (carrito.isEmpty()) {
             JOptionPane.showMessageDialog(null, "No tiene nada en el carrito");
             return;
         }
-        
+
         Random ran = new Random();
         int numero = ran.nextInt(1000000000);
         int idt = ((BigDecimal) TIENDASCLIENTE.getValueAt(TIENDASCLIENTE.getSelectedRow(), 0)).intValue();
@@ -5889,18 +5906,18 @@ public class Main extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         jLabel212.setText("NONE");
         try {
             this.cnx.fJTable1(seleccionarPRODUCTClient, "get_productos_disponibles");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         carrito = new ArrayList<>();
         carritoUPC = new ArrayList<>();
         subtotalCarrito = 0;
-        
+
     }//GEN-LAST:event_jLabel104MouseClicked
 
     private void jLabel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel31MouseClicked
@@ -5943,22 +5960,48 @@ public class Main extends javax.swing.JFrame {
 
     private void jLabel162MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel162MouseClicked
         try {
-            // TODO add your handling code here:
-            this.cnx.updateTiendas(Integer.parseInt(upc5.getText()), size4.getText(), embalaje5.getText());
+            this.cnx.updateTiendas(
+                    Integer.parseInt(upc5.getText()),
+                    size4.getText(),
+                    embalaje5.getText()
+            );
             this.cnx.fJTable1(modtiendatabla, "get_tiendas");
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumberFormatException e) {
+            // Manejo de errores de formato numérico con JOptionPane
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido para el ID.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException e) {
+            // Manejo de errores SQL con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error al actualizar la tienda en la base de datos: " + e.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            // Manejo de cualquier otra Exception con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jLabel162MouseClicked
 
     private void jLabel147MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel147MouseClicked
         try {
-            // TODO add your handling code here:
-            this.cnx.updateProducto(Integer.parseInt(upc3.getText()), 0, name3.getText(), Integer.parseInt(size2.getText()), embalaje3.getText(), marca2.getText(), Double.parseDouble(price2.getText()));
+            // Intenta realizar la actualización del producto y refrescar la tabla
+            this.cnx.updateProducto(
+                    Integer.parseInt(upc3.getText()),
+                    0, // Asegúrate de que este valor es correcto o está asignado adecuadamente
+                    name3.getText(),
+                    Integer.parseInt(size2.getText()),
+                    embalaje3.getText(),
+                    marca2.getText(),
+                    Double.parseDouble(price2.getText())
+            );
             this.cnx.fJTable1(modtablaprod, "get_productos");
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumberFormatException e) {
+            // Manejo de errores de formato numérico con JOptionPane
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido en los campos correspondientes.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException e) {
+            // Manejo de errores SQL con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error al actualizar en la base de datos: " + e.getMessage(), "Error SQL", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            // Manejo de cualquier otra Exception con JOptionPane
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
+
     }//GEN-LAST:event_jLabel147MouseClicked
 
     private void jLabel188MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel188MouseClicked
@@ -6015,8 +6058,8 @@ public class Main extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
-        DelP.setVisible(false);
-        GestionarP.setVisible(true);
+            DelP.setVisible(false);
+            GestionarP.setVisible(true);
 
         }
     }//GEN-LAST:event_jButton2MouseClicked
@@ -6055,7 +6098,7 @@ public class Main extends javax.swing.JFrame {
             }
 
         }
-        
+
     }//GEN-LAST:event_jLabel157MouseClicked
 
     private void delProductoTABLEKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_delProductoTABLEKeyPressed
@@ -6068,15 +6111,15 @@ public class Main extends javax.swing.JFrame {
         String nom = jTextField2.getText();
         String pass = jTextField3.getText();
         String usern = jTextField4.getText();
-        
+
         try {
-            this.cnx.updateVendors(idv,nom,pass,usern);
+            this.cnx.updateVendors(idv, nom, pass, usern);
             this.cnx.fJTable1(jTable3, "get_vendedores");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
+
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
@@ -6134,7 +6177,7 @@ public class Main extends javax.swing.JFrame {
         String pass = namec2.getText();
         String usern = namec9.getText();
         try {
-            this.cnx.updateCliente(id, nomb,correo , pass , usern);
+            this.cnx.updateCliente(id, nomb, correo, pass, usern);
             this.cnx.fJTable1(jTable4, "get_clientes");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -6148,7 +6191,7 @@ public class Main extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }//GEN-LAST:event_t_ventasyearMouseClicked
 
     private void logout2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logout2MouseClicked
@@ -6179,17 +6222,16 @@ public class Main extends javax.swing.JFrame {
         for (int i = 0; i < 7; i++) {
             arr[i] = seleccionarPRODUCTClient.getValueAt(row, i);
         }
-        carrito.add((String)arr[2]);
+        carrito.add((String) arr[2]);
         jLabel212.setText(carrito.toString());
-        carritoUPC.add(((BigDecimal)arr[0]).intValue());
-        carritoPrices.add(((BigDecimal)arr[6]).intValue());
-        subtotalCarrito += ((BigDecimal)arr[6]).intValue();
-        DefaultTableModel modelo = (DefaultTableModel)seleccionarPRODUCTClient.getModel();
+        carritoUPC.add(((BigDecimal) arr[0]).intValue());
+        carritoPrices.add(((BigDecimal) arr[6]).intValue());
+        subtotalCarrito += ((BigDecimal) arr[6]).intValue();
+        DefaultTableModel modelo = (DefaultTableModel) seleccionarPRODUCTClient.getModel();
         modelo.removeRow(row);
         seleccionarPRODUCTClient.setModel(modelo);
-        
-        
-        
+
+
     }//GEN-LAST:event_jLabel130MouseClicked
 
     private void btn_comprar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_comprar1MouseEntered
@@ -6207,7 +6249,7 @@ public class Main extends javax.swing.JFrame {
         int numero = rand.nextInt(1000000000);
         int idt = Integer.parseInt(factnum.getText());
         double subtot = Double.parseDouble(subtotal.getText());
-        double tota = subtot + (subtot*0.12);
+        double tota = subtot + (subtot * 0.12);
         try {
             this.cnx.generarFactura(numero, idt, idc, new Date(), subtot, "0.12", tota);
         } catch (SQLException ex) {
