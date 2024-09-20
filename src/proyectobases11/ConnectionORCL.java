@@ -67,6 +67,30 @@ public class ConnectionORCL {
         JOptionPane.showMessageDialog(null, result);
 
     }
+    
+    
+    public void insertIntoTabla_tiene(int a, int b, int c, int d, String e) throws SQLException {
+
+        CallableStatement callableStmt = null;
+        String functionCall = "{ ? = call insert_tiene(?, ?, ?, ?, ?) }";
+
+        callableStmt = conn.prepareCall(functionCall);
+
+        callableStmt.registerOutParameter(1, Types.VARCHAR);
+
+        callableStmt.setInt(2, a);
+        callableStmt.setInt(3, b);
+        callableStmt.setInt(4, c);
+        callableStmt.setInt(5, d);
+        callableStmt.setString(6, e);
+
+        callableStmt.execute();
+
+        String result = callableStmt.getString(1);
+        JOptionPane.showMessageDialog(null, result);
+
+    }
+    
 
     public void updateTiendas(int id, String n_nombre, String n_horario) throws SQLException {
         CallableStatement callableStatement = conn.prepareCall("{ ? = call update_tienda(?, ?, ?) }");

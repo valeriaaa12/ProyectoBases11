@@ -32,6 +32,7 @@ public class Main extends javax.swing.JFrame {
     private static boolean flag1 = false;
     private ArrayList<String> carrito = new ArrayList<>();
     private ArrayList<Integer> carritoUPC = new ArrayList<>();
+    private ArrayList<Integer> carritoPrices = new ArrayList<>();
     private int subtotalCarrito = 0;
     
 
@@ -5882,6 +5883,7 @@ public class Main extends javax.swing.JFrame {
         try {
             for (int i = 0; i < carritoUPC.size(); i++) {
                 this.cnx.updateProdNumber(carritoUPC.get(i), numero);
+                this.cnx.insertIntoTabla_tiene(idt, carritoUPC.get(i), carritoPrices.get(i), 1, "SI");
             }
             this.cnx.generarFactura(numero, idt, idc, fecha, subtot, ISV, tot);
         } catch (SQLException ex) {
@@ -6180,6 +6182,7 @@ public class Main extends javax.swing.JFrame {
         carrito.add((String)arr[2]);
         jLabel212.setText(carrito.toString());
         carritoUPC.add(((BigDecimal)arr[0]).intValue());
+        carritoPrices.add(((BigDecimal)arr[6]).intValue());
         subtotalCarrito += ((BigDecimal)arr[6]).intValue();
         DefaultTableModel modelo = (DefaultTableModel)seleccionarPRODUCTClient.getModel();
         modelo.removeRow(row);
