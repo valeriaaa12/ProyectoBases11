@@ -83,7 +83,34 @@ public class ConnectionORCL {
 
         JOptionPane.showMessageDialog(null, result);
     }
-
+    
+    public void updateCliente(int idC, String name, String email, String pass, String user) throws SQLException{
+        CallableStatement callableStatement = conn.prepareCall("{ ? = call update_cliente(?, ?, ?, ?, ?) }");
+        callableStatement.registerOutParameter(1, Types.VARCHAR);
+        callableStatement.setInt(2, idC);
+        callableStatement.setString(3, name);
+        callableStatement.setString(4, email);
+        callableStatement.setString(5, pass);
+        callableStatement.setString(6, user);
+        callableStatement.execute();
+        String result = callableStatement.getString(1);
+        JOptionPane.showMessageDialog(null, result);
+        
+         
+    }
+    
+    public void updateVendors(int id, String name, String pass, String user) throws SQLException{
+        CallableStatement callableStatement = conn.prepareCall("{ ? = call update_vendedor(?, ?, ?, ?) }");
+        callableStatement.registerOutParameter(1, Types.VARCHAR);
+        callableStatement.setInt(2, id);
+        callableStatement.setString(3, name);
+        callableStatement.setString(4, pass);
+        callableStatement.setString(5, user);
+        callableStatement.execute();
+        String result = callableStatement.getString(1);
+        JOptionPane.showMessageDialog(null, result);
+    }
+    
     public void updateProducto(int upc, int numero, String Nombre, int tam, String embalaje, String marca, double precio) throws SQLException {
         CallableStatement callableStatement = conn.prepareCall("{ ? = call update_producto(?, ?, ?, ?, ?, ?, ?) }");
 
@@ -156,9 +183,6 @@ public class ConnectionORCL {
         JOptionPane.showMessageDialog(null, result);
     }
 
-    public void modify() {
-
-    }
 
 
     public String[] search(String functionOracle, String searchUsername, String parameter) throws SQLException {

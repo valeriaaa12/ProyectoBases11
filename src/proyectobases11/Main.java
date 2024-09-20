@@ -2804,14 +2804,14 @@ public class Main extends javax.swing.JFrame {
         jPanel18.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 150, -1));
 
         jButton1.setBackground(new java.awt.Color(51, 51, 255));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 0, 255));
         jButton1.setText("MODIFICAR VENDEDOR");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
             }
         });
-        jPanel18.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 340, 90));
+        jPanel18.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 340, 90));
 
         javax.swing.GroupLayout ModVendedorLayout = new javax.swing.GroupLayout(ModVendedor.getContentPane());
         ModVendedor.getContentPane().setLayout(ModVendedorLayout);
@@ -2821,7 +2821,7 @@ public class Main extends javax.swing.JFrame {
         );
         ModVendedorLayout.setVerticalGroup(
             ModVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, 562, Short.MAX_VALUE)
         );
 
         jPanel45.setBackground(new java.awt.Color(255, 255, 255));
@@ -3540,6 +3540,9 @@ public class Main extends javax.swing.JFrame {
         t_ventasyear.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         t_ventasyear.setPreferredSize(new java.awt.Dimension(193, 28));
         t_ventasyear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                t_ventasyearMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 t_ventasyearMouseEntered(evt);
             }
@@ -5531,15 +5534,17 @@ public class Main extends javax.swing.JFrame {
 
     private void ModClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModClienteMouseClicked
         // TODO add your handling code here:
-        ModC.pack();
-        ModC.setModal(true);
-        ModC.setLocationRelativeTo(this);
-        ModC.setVisible(true);
-        try {
+       try {
             this.cnx.fJTable1(jTable4, "get_clientes");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        ModC.pack();
+        ModC.setModal(true);
+        ModC.setLocationRelativeTo(this);
+        ModC.setVisible(true);
+        
     }//GEN-LAST:event_ModClienteMouseClicked
 
     private void DelClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DelClienteMouseClicked
@@ -5818,7 +5823,7 @@ public class Main extends javax.swing.JFrame {
     private void jLabel104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel104MouseClicked
         // TODO add your handling code here:
         Random ran = new Random();
-        int numero = ((BigDecimal) seleccionarPRODUCTClient.getValueAt(seleccionarPRODUCTClient.getSelectedRow(), 6)).intValue();
+        int numero = ran.nextInt(1000000000);
         int idt = ((BigDecimal) TIENDASCLIENTE.getValueAt(TIENDASCLIENTE.getSelectedRow(), 0)).intValue();
         int idc = currentIDC;
         Date fecha = new Date();
@@ -5993,6 +5998,18 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
+        int idv = Integer.parseInt(jTextField1.getText());
+        String nom = jTextField2.getText();
+        String pass = jTextField3.getText();
+        String usern = jTextField4.getText();
+        
+        try {
+            this.cnx.updateVendors(idv,nom,pass,usern);
+            this.cnx.fJTable1(jTable3, "get_vendedores");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -6045,8 +6062,28 @@ public class Main extends javax.swing.JFrame {
 
     private void jLabel176MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel176MouseClicked
         // TODO add your handling code here:
-        
+        int id = Integer.parseInt(idc2.getText());
+        String nomb = namec3.getText();
+        String correo = namec8.getText();
+        String pass = namec2.getText();
+        String usern = namec9.getText();
+        try {
+            this.cnx.updateCliente(id, nomb,correo , pass , usern);
+            this.cnx.fJTable1(jTable4, "get_clientes");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jLabel176MouseClicked
+
+    private void t_ventasyearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t_ventasyearMouseClicked
+        try {
+            // TODO add your handling code here:
+            this.cnx.fJTable1(jTable1, "get_top5_tiendas");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_t_ventasyearMouseClicked
 
     private void creaciondeCliente() {
 
