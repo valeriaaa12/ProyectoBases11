@@ -945,6 +945,9 @@ public class Main extends javax.swing.JFrame {
         vlogout.setBackground(new java.awt.Color(22, 56, 242));
         vlogout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         vlogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                vlogoutMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 vlogoutMouseEntered(evt);
             }
@@ -3852,6 +3855,9 @@ public class Main extends javax.swing.JFrame {
         logout2.setBackground(new java.awt.Color(22, 56, 242));
         logout2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         logout2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logout2MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 logout2MouseEntered(evt);
             }
@@ -6084,6 +6090,18 @@ public class Main extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_t_ventasyearMouseClicked
+
+    private void logout2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logout2MouseClicked
+        // TODO add your handling code here:
+        mai.setVisible(false);
+        Jf_login.setVisible(true);
+    }//GEN-LAST:event_logout2MouseClicked
+
+    private void vlogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vlogoutMouseClicked
+        // TODO add your handling code here:
+        jFrame2.setVisible(false);
+        Jf_login.setVisible(true);
+    }//GEN-LAST:event_vlogoutMouseClicked
 
     private void creaciondeCliente() {
 
