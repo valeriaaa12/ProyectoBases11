@@ -7,12 +7,14 @@ package proyectobases11;
 import java.awt.Color;
 import java.math.BigDecimal;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import oracle.sql.ARRAY;
 
 /**
  *
@@ -28,6 +30,10 @@ public class Main extends javax.swing.JFrame {
     private ConnectionORCL cnx;
     private String currentIn;
     private static boolean flag1 = false;
+    private ArrayList<String> carrito = new ArrayList<>();
+    private ArrayList<Integer> carritoUPC = new ArrayList<>();
+    private int subtotalCarrito = 0;
+    
 
     public Main() throws SQLException, ClassNotFoundException {
         initComponents();
@@ -122,17 +128,18 @@ public class Main extends javax.swing.JFrame {
         TIENDASCLIENTE = new javax.swing.JTable();
         btn_comprar = new javax.swing.JPanel();
         jLabel104 = new javax.swing.JLabel();
-        cantidadComprar = new javax.swing.JSpinner();
         jLabel94 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
         seleccionarPRODUCTClient = new javax.swing.JTable();
         jLabel166 = new javax.swing.JLabel();
+        btn_comprar1 = new javax.swing.JPanel();
+        jLabel130 = new javax.swing.JLabel();
+        jLabel140 = new javax.swing.JLabel();
+        jLabel212 = new javax.swing.JLabel();
         jLabel108 = new javax.swing.JLabel();
         CrearProd = new javax.swing.JDialog();
         jPanel8 = new javax.swing.JPanel();
         jLabel129 = new javax.swing.JLabel();
-        jLabel130 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel132 = new javax.swing.JLabel();
         jLabel133 = new javax.swing.JLabel();
@@ -146,7 +153,6 @@ public class Main extends javax.swing.JFrame {
         size1 = new javax.swing.JTextField();
         marca1 = new javax.swing.JTextField();
         name2 = new javax.swing.JTextField();
-        cant1 = new javax.swing.JSpinner();
         type2 = new javax.swing.JTextField();
         jPanel12 = new javax.swing.JPanel();
         jLabel131 = new javax.swing.JLabel();
@@ -154,7 +160,6 @@ public class Main extends javax.swing.JFrame {
         ModProd = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
         jLabel139 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel141 = new javax.swing.JLabel();
         jLabel142 = new javax.swing.JLabel();
@@ -168,7 +173,6 @@ public class Main extends javax.swing.JFrame {
         size2 = new javax.swing.JTextField();
         marca2 = new javax.swing.JTextField();
         name3 = new javax.swing.JTextField();
-        cant2 = new javax.swing.JSpinner();
         type3 = new javax.swing.JTextField();
         jPanel15 = new javax.swing.JPanel();
         jLabel147 = new javax.swing.JLabel();
@@ -322,17 +326,17 @@ public class Main extends javax.swing.JFrame {
         jLabel192 = new javax.swing.JLabel();
         jLabel193 = new javax.swing.JLabel();
         jPanel41 = new javax.swing.JPanel();
-        jLabel197 = new javax.swing.JLabel();
         total = new javax.swing.JTextField();
         generarfactura = new javax.swing.JPanel();
         jLabel200 = new javax.swing.JLabel();
         jLabel201 = new javax.swing.JLabel();
-        ventacb = new javax.swing.JComboBox<>();
         factnum = new javax.swing.JTextField();
-        jLabel194 = new javax.swing.JLabel();
-        isv = new javax.swing.JTextField();
         jLabel198 = new javax.swing.JLabel();
         subtotal = new javax.swing.JTextField();
+        jScrollPane17 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
+        jScrollPane18 = new javax.swing.JScrollPane();
+        jTable7 = new javax.swing.JTable();
         Factura = new javax.swing.JDialog();
         jPanel42 = new javax.swing.JPanel();
         jLabel195 = new javax.swing.JLabel();
@@ -1335,6 +1339,7 @@ public class Main extends javax.swing.JFrame {
         jLabel104.setBackground(new java.awt.Color(255, 255, 255));
         jLabel104.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         jLabel104.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel104.setText("Comprar seleccion");
         jLabel104.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1346,25 +1351,22 @@ public class Main extends javax.swing.JFrame {
         btn_comprar.setLayout(btn_comprarLayout);
         btn_comprarLayout.setHorizontalGroup(
             btn_comprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel104, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_comprarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel104, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                .addContainerGap())
         );
         btn_comprarLayout.setVerticalGroup(
             btn_comprarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel104, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+            .addComponent(jLabel104, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
         );
 
-        jPanel7.add(btn_comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 490, 140, 50));
-        jPanel7.add(cantidadComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 180, 50));
+        jPanel7.add(btn_comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 540, 140, 50));
 
         jLabel94.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel94.setForeground(new java.awt.Color(0, 51, 255));
         jLabel94.setText("SELECCIONE PRODUCTO");
-        jPanel7.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 60, 160, 30));
-
-        jLabel103.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel103.setForeground(new java.awt.Color(0, 51, 255));
-        jLabel103.setText("Cantidad");
-        jPanel7.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, 60, 30));
+        jPanel7.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 160, 30));
 
         seleccionarPRODUCTClient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1376,22 +1378,65 @@ public class Main extends javax.swing.JFrame {
         ));
         jScrollPane10.setViewportView(seleccionarPRODUCTClient);
 
-        jPanel7.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, 340));
+        jPanel7.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, -1, 340));
 
         jLabel166.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel166.setForeground(new java.awt.Color(0, 51, 255));
         jLabel166.setText("SELECCIONE TIENDA");
         jPanel7.add(jLabel166, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 120, 30));
 
+        btn_comprar1.setBackground(new java.awt.Color(22, 56, 242));
+        btn_comprar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_comprar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_comprar1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_comprar1MouseExited(evt);
+            }
+        });
+
+        jLabel130.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel130.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
+        jLabel130.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel130.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel130.setText("Add al Carrito");
+        jLabel130.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel130MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btn_comprar1Layout = new javax.swing.GroupLayout(btn_comprar1);
+        btn_comprar1.setLayout(btn_comprar1Layout);
+        btn_comprar1Layout.setHorizontalGroup(
+            btn_comprar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel130, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+        );
+        btn_comprar1Layout.setVerticalGroup(
+            btn_comprar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel130, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+        );
+
+        jPanel7.add(btn_comprar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 260, 140, 50));
+
+        jLabel140.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel140.setText("En el Carrito: ");
+        jPanel7.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 540, -1, -1));
+
+        jLabel212.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel212.setText("NONE");
+        jPanel7.add(jLabel212, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 540, 430, -1));
+
         javax.swing.GroupLayout jd_menuCompraLayout = new javax.swing.GroupLayout(jd_menuCompra.getContentPane());
         jd_menuCompra.getContentPane().setLayout(jd_menuCompraLayout);
         jd_menuCompraLayout.setHorizontalGroup(
             jd_menuCompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 972, Short.MAX_VALUE)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 1074, Short.MAX_VALUE)
         );
         jd_menuCompraLayout.setVerticalGroup(
             jd_menuCompraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 562, Short.MAX_VALUE)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
         );
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
@@ -1401,12 +1446,6 @@ public class Main extends javax.swing.JFrame {
         jLabel129.setForeground(new java.awt.Color(255, 255, 255));
         jLabel129.setText("Ingresar Producto");
         jPanel8.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
-
-        jLabel130.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel130.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel130.setForeground(new java.awt.Color(22, 56, 242));
-        jLabel130.setText("Cantidad");
-        jPanel8.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
         jPanel9.setBackground(new java.awt.Color(22, 56, 242));
 
@@ -1464,9 +1503,6 @@ public class Main extends javax.swing.JFrame {
         jPanel8.add(size1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 210, -1));
         jPanel8.add(marca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 210, -1));
         jPanel8.add(name2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 210, -1));
-
-        cant1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
-        jPanel8.add(cant1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 210, -1));
         jPanel8.add(type2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 210, -1));
 
         jPanel12.setBackground(new java.awt.Color(22, 56, 242));
@@ -1534,12 +1570,6 @@ public class Main extends javax.swing.JFrame {
         jLabel139.setText("Modificar Producto");
         jPanel13.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, -1));
 
-        jLabel140.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel140.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(22, 56, 242));
-        jLabel140.setText("Cantidad");
-        jPanel13.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
-
         jPanel14.setBackground(new java.awt.Color(22, 56, 242));
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -1596,9 +1626,6 @@ public class Main extends javax.swing.JFrame {
         jPanel13.add(size2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 210, -1));
         jPanel13.add(marca2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 210, -1));
         jPanel13.add(name3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 210, -1));
-
-        cant2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
-        jPanel13.add(cant2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 210, -1));
         jPanel13.add(type3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 210, -1));
 
         jPanel15.setBackground(new java.awt.Color(22, 56, 242));
@@ -2033,7 +2060,7 @@ public class Main extends javax.swing.JFrame {
         );
         DelTiendaLayout.setVerticalGroup(
             DelTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+            .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
         );
 
         jPanel28.setBackground(new java.awt.Color(255, 255, 255));
@@ -2893,14 +2920,15 @@ public class Main extends javax.swing.JFrame {
         jPanel40.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel192.setFont(new java.awt.Font("Microsoft JhengHei Light", 2, 24)); // NOI18N
+        jLabel192.setForeground(new java.awt.Color(255, 255, 255));
         jLabel192.setText("Generar Factura");
         jPanel40.add(jLabel192, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
 
         jLabel193.setBackground(new java.awt.Color(255, 255, 255));
         jLabel193.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel193.setForeground(new java.awt.Color(22, 56, 242));
-        jLabel193.setText("Total");
-        jPanel40.add(jLabel193, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+        jLabel193.setText("Cliente ID");
+        jPanel40.add(jLabel193, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
 
         jPanel41.setBackground(new java.awt.Color(22, 56, 242));
 
@@ -2908,21 +2936,15 @@ public class Main extends javax.swing.JFrame {
         jPanel41.setLayout(jPanel41Layout);
         jPanel41Layout.setHorizontalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 770, Short.MAX_VALUE)
+            .addGap(0, 1140, Short.MAX_VALUE)
         );
         jPanel41Layout.setVerticalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 80, Short.MAX_VALUE)
         );
 
-        jPanel40.add(jPanel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 770, 80));
-
-        jLabel197.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel197.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel197.setForeground(new java.awt.Color(22, 56, 242));
-        jLabel197.setText("Numero de Factura");
-        jPanel40.add(jLabel197, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
-        jPanel40.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 210, -1));
+        jPanel40.add(jPanel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1140, 80));
+        jPanel40.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, -1));
 
         generarfactura.setBackground(new java.awt.Color(22, 56, 242));
         generarfactura.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -2942,6 +2964,11 @@ public class Main extends javax.swing.JFrame {
         jLabel200.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
         jLabel200.setForeground(new java.awt.Color(255, 255, 255));
         jLabel200.setText("Generar Factura");
+        jLabel200.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel200MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout generarfacturaLayout = new javax.swing.GroupLayout(generarfactura);
         generarfactura.setLayout(generarfacturaLayout);
@@ -2960,40 +2987,55 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        jPanel40.add(generarfactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 280, 50));
+        jPanel40.add(generarfactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 280, 50));
 
         jLabel201.setBackground(new java.awt.Color(255, 255, 255));
         jLabel201.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel201.setForeground(new java.awt.Color(22, 56, 242));
         jLabel201.setText("Tienda");
         jPanel40.add(jLabel201, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
-
-        jPanel40.add(ventacb, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 210, -1));
-        jPanel40.add(factnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 210, -1));
-
-        jLabel194.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel194.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
-        jLabel194.setForeground(new java.awt.Color(22, 56, 242));
-        jLabel194.setText("Isv");
-        jPanel40.add(jLabel194, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
-        jPanel40.add(isv, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 210, -1));
+        jPanel40.add(factnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 210, -1));
 
         jLabel198.setBackground(new java.awt.Color(255, 255, 255));
         jLabel198.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
         jLabel198.setForeground(new java.awt.Color(22, 56, 242));
         jLabel198.setText("SubTotal");
-        jPanel40.add(jLabel198, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
-        jPanel40.add(subtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 210, -1));
+        jPanel40.add(jLabel198, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+        jPanel40.add(subtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 210, -1));
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane17.setViewportView(jTable6);
+
+        jPanel40.add(jScrollPane17, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 100, 240, 290));
+
+        jTable7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane18.setViewportView(jTable7);
+
+        jPanel40.add(jScrollPane18, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 240, 290));
 
         javax.swing.GroupLayout VentaLayout = new javax.swing.GroupLayout(Venta.getContentPane());
         Venta.getContentPane().setLayout(VentaLayout);
         VentaLayout.setHorizontalGroup(
             VentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, 1066, Short.MAX_VALUE)
         );
         VentaLayout.setVerticalGroup(
             VentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
+            .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
         );
 
         jPanel42.setBackground(new java.awt.Color(255, 255, 255));
@@ -3591,6 +3633,9 @@ public class Main extends javax.swing.JFrame {
         t_cocapepsi.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         t_cocapepsi.setPreferredSize(new java.awt.Dimension(193, 28));
         t_cocapepsi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                t_cocapepsiMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 t_cocapepsiMouseEntered(evt);
             }
@@ -5358,10 +5403,20 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_logoutMouseExited
 
     private void btn_menuComprasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuComprasMouseClicked
+        
+        try {
+            this.cnx.fJTable1(seleccionarPRODUCTClient, "get_productos_disponibles");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
         jd_menuCompra.pack();
         jd_menuCompra.setModal(true);
         jd_menuCompra.setLocationRelativeTo(this);
         jd_menuCompra.setVisible(true);
+        
+        
     }//GEN-LAST:event_btn_menuComprasMouseClicked
 
     private void btn_menuComprasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_menuComprasMouseEntered
@@ -5609,14 +5664,29 @@ public class Main extends javax.swing.JFrame {
 
     private void gfacturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gfacturaMouseClicked
         // TODO add your handling code here:
+        try {
+            this.cnx.fJTable1(jTable6, "get_tiendas");
+            this.cnx.fJTable1(jTable7, "get_clientes");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         Venta.pack();
         Venta.setModal(true);
         Venta.setLocationRelativeTo(this);
         Venta.setVisible(true);
+        
     }//GEN-LAST:event_gfacturaMouseClicked
 
     private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+
+            this.cnx.fJTable1(jTable6, "get_tiendas");
+            this.cnx.fJTable1(jTable7, "get_clientes");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
         Venta.pack();
         Venta.setModal(true);
         Venta.setLocationRelativeTo(this);
@@ -5825,7 +5895,7 @@ public class Main extends javax.swing.JFrame {
         int upC = Integer.parseInt(upc2.getText());
         int taman = Integer.parseInt(size1.getText());
         String nombre = name2.getText();
-        int numero = (Integer) cant1.getValue();
+        int numero = 0;
         String embalaj = embalaje2.getText();
         double price = Double.parseDouble(price1.getText());
         try {
@@ -5838,6 +5908,16 @@ public class Main extends javax.swing.JFrame {
 
     private void jLabel104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel104MouseClicked
         // TODO add your handling code here:
+        if(TIENDASCLIENTE.getSelectedRow() == -1){
+            JOptionPane.showMessageDialog(null, "Debe seleccionar una tienda y un producto");
+            return;
+        }
+        
+        if(carrito.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No tiene nada en el carrito");
+            return;
+        }
+        
         Random ran = new Random();
         int numero = ran.nextInt(1000000000);
         int idt = ((BigDecimal) TIENDASCLIENTE.getValueAt(TIENDASCLIENTE.getSelectedRow(), 0)).intValue();
@@ -5845,13 +5925,28 @@ public class Main extends javax.swing.JFrame {
         Date fecha = new Date();
         String ISV = "0.12";
         double ISVVALUE = 0.12;
-        double subtot = (((BigDecimal) seleccionarPRODUCTClient.getValueAt(seleccionarPRODUCTClient.getSelectedRow(), 6)).doubleValue()) * ((Integer) cantidadComprar.getValue());
+        double subtot = subtotalCarrito;
         double tot = (0.12 * subtot) + subtot;
         try {
+            for (int i = 0; i < carritoUPC.size(); i++) {
+                this.cnx.updateProdNumber(carritoUPC.get(i), numero);
+            }
             this.cnx.generarFactura(numero, idt, idc, fecha, subtot, ISV, tot);
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        jLabel212.setText("NONE");
+        try {
+            this.cnx.fJTable1(seleccionarPRODUCTClient, "get_productos_disponibles");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        carrito = new ArrayList<>();
+        carritoUPC = new ArrayList<>();
+        subtotalCarrito = 0;
+        
     }//GEN-LAST:event_jLabel104MouseClicked
 
     private void jLabel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel31MouseClicked
@@ -5896,6 +5991,7 @@ public class Main extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             this.cnx.updateTiendas(Integer.parseInt(upc5.getText()), size4.getText(), embalaje5.getText());
+            this.cnx.fJTable1(modtiendatabla, "get_tiendas");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -5904,7 +6000,7 @@ public class Main extends javax.swing.JFrame {
     private void jLabel147MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel147MouseClicked
         try {
             // TODO add your handling code here:
-            this.cnx.updateProducto(Integer.parseInt(upc3.getText()), (Integer) cant2.getValue(), name3.getText(), Integer.parseInt(size2.getText()), embalaje3.getText(), marca2.getText(), Double.parseDouble(price2.getText()));
+            this.cnx.updateProducto(Integer.parseInt(upc3.getText()), 0, name3.getText(), Integer.parseInt(size2.getText()), embalaje3.getText(), marca2.getText(), Double.parseDouble(price2.getText()));
             this.cnx.fJTable1(modtablaprod, "get_productos");
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -6113,6 +6209,57 @@ public class Main extends javax.swing.JFrame {
         Jf_login.setVisible(true);
     }//GEN-LAST:event_vlogoutMouseClicked
 
+    private void t_cocapepsiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t_cocapepsiMouseClicked
+        try {
+            // TODO add your handling code here:
+            this.cnx.fJTable1(jTable1, "get_masvendidoiphone");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_t_cocapepsiMouseClicked
+
+    private void jLabel130MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel130MouseClicked
+        // TODO add your handling code here:
+        Object[] arr = new Object[10];
+        int row = seleccionarPRODUCTClient.getSelectedRow();
+        for (int i = 0; i < 7; i++) {
+            arr[i] = seleccionarPRODUCTClient.getValueAt(row, i);
+        }
+        carrito.add((String)arr[2]);
+        jLabel212.setText(carrito.toString());
+        carritoUPC.add(((BigDecimal)arr[0]).intValue());
+        subtotalCarrito += ((BigDecimal)arr[6]).intValue();
+        DefaultTableModel modelo = (DefaultTableModel)seleccionarPRODUCTClient.getModel();
+        modelo.removeRow(row);
+        seleccionarPRODUCTClient.setModel(modelo);
+        
+        
+        
+    }//GEN-LAST:event_jLabel130MouseClicked
+
+    private void btn_comprar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_comprar1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_comprar1MouseEntered
+
+    private void btn_comprar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_comprar1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_comprar1MouseExited
+
+    private void jLabel200MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel200MouseClicked
+        // TODO add your handling code here:
+        Random rand = new Random();
+        int idc = Integer.parseInt(total.getText());
+        int numero = rand.nextInt(1000000000);
+        int idt = Integer.parseInt(factnum.getText());
+        double subtot = Double.parseDouble(subtotal.getText());
+        double tota = subtot + (subtot*0.12);
+        try {
+            this.cnx.generarFactura(numero, idt, idc, new Date(), subtot, "0.12", tota);
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel200MouseClicked
+
     private void creaciondeCliente() {
 
     }
@@ -6200,15 +6347,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel bt_clientes;
     private javax.swing.JPanel bt_login;
     private javax.swing.JPanel btn_comprar;
+    private javax.swing.JPanel btn_comprar1;
     private javax.swing.JPanel btn_eliminarProducto;
     private javax.swing.JPanel btn_listarProductos;
     private javax.swing.JPanel btn_logout;
     private javax.swing.JPanel btn_menuCompras;
     private javax.swing.JPanel c_cliente;
     private javax.swing.JPanel c_cliente1;
-    private javax.swing.JSpinner cant1;
-    private javax.swing.JSpinner cant2;
-    private javax.swing.JSpinner cantidadComprar;
     private javax.swing.JTable clientsEliminateTable;
     private javax.swing.JPanel cpedido;
     private javax.swing.JPanel crear_b;
@@ -6240,7 +6385,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField idc2;
     private javax.swing.JTextField idc3;
     private javax.swing.JPanel inv;
-    private javax.swing.JTextField isv;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JFrame jFrame2;
@@ -6249,7 +6393,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
@@ -6349,10 +6492,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel191;
     private javax.swing.JLabel jLabel192;
     private javax.swing.JLabel jLabel193;
-    private javax.swing.JLabel jLabel194;
     private javax.swing.JLabel jLabel195;
     private javax.swing.JLabel jLabel196;
-    private javax.swing.JLabel jLabel197;
     private javax.swing.JLabel jLabel198;
     private javax.swing.JLabel jLabel199;
     private javax.swing.JLabel jLabel2;
@@ -6370,6 +6511,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel210;
     private javax.swing.JLabel jLabel211;
+    private javax.swing.JLabel jLabel212;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
@@ -6508,6 +6650,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane17;
+    private javax.swing.JScrollPane jScrollPane18;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -6533,6 +6677,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable6;
+    private javax.swing.JTable jTable7;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -6592,7 +6738,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField upc3;
     private javax.swing.JTextField upc4;
     private javax.swing.JTextField upc5;
-    private javax.swing.JComboBox<String> ventacb;
     private javax.swing.JPanel vlogout;
     // End of variables declaration//GEN-END:variables
 }

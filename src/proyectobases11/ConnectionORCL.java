@@ -84,6 +84,22 @@ public class ConnectionORCL {
         JOptionPane.showMessageDialog(null, result);
     }
     
+    
+    public void updateProdNumber(int id, int n_num) throws SQLException {
+        CallableStatement callableStatement = conn.prepareCall("{ ? = call update_productocart(?, ?) }");
+
+        callableStatement.registerOutParameter(1, Types.VARCHAR);
+
+        callableStatement.setInt(2, id);
+        callableStatement.setInt(3, n_num);
+
+        callableStatement.execute();
+
+        String result = callableStatement.getString(1);
+
+        JOptionPane.showMessageDialog(null, result);
+    }
+    
     public void updateCliente(int idC, String name, String email, String pass, String user) throws SQLException{
         CallableStatement callableStatement = conn.prepareCall("{ ? = call update_cliente(?, ?, ?, ?, ?) }");
         callableStatement.registerOutParameter(1, Types.VARCHAR);
