@@ -3260,7 +3260,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel11)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         modificar_bLayout.setVerticalGroup(
             modificar_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3302,7 +3302,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel39)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel12)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         eliminar_bLayout.setVerticalGroup(
             eliminar_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3311,7 +3311,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(eliminar_bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel12)
                     .addComponent(jLabel39))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -3407,7 +3407,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(c_clienteLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel15)))
-                .addGap(0, 2, Short.MAX_VALUE))
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         h_ventas.setBackground(new java.awt.Color(22, 56, 242));
@@ -3489,7 +3489,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(p_vendidoTiendaLayout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jLabel20)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         p_vendidoTiendaLayout.setVerticalGroup(
             p_vendidoTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3532,7 +3532,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(p_vendidopaisLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jLabel22)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         p_vendidopaisLayout.setVerticalGroup(
             p_vendidopaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3575,14 +3575,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(t_ventasyearLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(jLabel24)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         t_ventasyearLayout.setVerticalGroup(
             t_ventasyearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, t_ventasyearLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jLabel25))
         );
 
@@ -3609,7 +3609,7 @@ public class Main extends javax.swing.JFrame {
         jLabel28.setBackground(new java.awt.Color(255, 255, 255));
         jLabel28.setFont(new java.awt.Font("Eras Demi ITC", 0, 12)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setText("Producto vs Producto");
+        jLabel28.setText("Iphone vs Samsung");
 
         javax.swing.GroupLayout t_cocapepsiLayout = new javax.swing.GroupLayout(t_cocapepsi);
         t_cocapepsi.setLayout(t_cocapepsiLayout);
@@ -4219,12 +4219,12 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel61)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel60)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         crear_b1Layout.setVerticalGroup(
             crear_b1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crear_b1Layout.createSequentialGroup()
-                .addGap(0, 5, Short.MAX_VALUE)
+                .addGap(0, 7, Short.MAX_VALUE)
                 .addGroup(crear_b1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel60)
                     .addComponent(jLabel61))
@@ -4261,7 +4261,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel62)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         modificar_b1Layout.setVerticalGroup(
             modificar_b1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4299,7 +4299,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel65)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel64)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         eliminar_b1Layout.setVerticalGroup(
             eliminar_b1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4308,7 +4308,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(eliminar_b1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel64)
                     .addComponent(jLabel65))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -4350,7 +4350,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel67)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, i_productos1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(8, Short.MAX_VALUE)
                 .addComponent(jLabel66)
                 .addContainerGap())
         );
@@ -4392,7 +4392,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(c_cliente1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel68)))
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
         h_ventas1.setBackground(new java.awt.Color(68, 68, 68));
@@ -4462,14 +4462,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(p_vendidoTienda1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jLabel72)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         p_vendidoTienda1Layout.setVerticalGroup(
             p_vendidoTienda1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_vendidoTienda1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel72)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jLabel73))
         );
 
@@ -4501,14 +4501,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(p_vendidopais1Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jLabel74)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         p_vendidopais1Layout.setVerticalGroup(
             p_vendidopais1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_vendidopais1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel74)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jLabel75))
         );
 
@@ -4540,14 +4540,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(t_ventasyear1Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(jLabel76)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         t_ventasyear1Layout.setVerticalGroup(
             t_ventasyear1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, t_ventasyear1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel76)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jLabel77))
         );
 
@@ -4584,14 +4584,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(t_cocapepsi1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jLabel79)))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         t_cocapepsi1Layout.setVerticalGroup(
             t_cocapepsi1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, t_cocapepsi1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel79)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jLabel80))
         );
 
@@ -4623,14 +4623,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(top_ventas1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jLabel81)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         top_ventas1Layout.setVerticalGroup(
             top_ventas1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, top_ventas1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel81)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jLabel82))
         );
 
@@ -6277,16 +6277,20 @@ public class Main extends javax.swing.JFrame {
 
     private void jLabel200MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel200MouseClicked
         // TODO add your handling code here:
-        Random rand = new Random();
-        int idc = Integer.parseInt(total.getText());
-        int numero = rand.nextInt(1000000000);
-        int idt = Integer.parseInt(factnum.getText());
-        double subtot = Double.parseDouble(subtotal.getText());
-        double tota = subtot + (subtot * 0.12);
         try {
+            Random rand = new Random();
+            int idc = Integer.parseInt(total.getText());
+            int numero = rand.nextInt(1000000000);
+            int idt = Integer.parseInt(factnum.getText());
+            double subtot = Double.parseDouble(subtotal.getText());
+            double tota = subtot + (subtot * 0.12);
             this.cnx.generarFactura(numero, idt, idc, new Date(), subtot, "0.12", tota);
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido en los campos correspondientes.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error inesperado: " + e.getMessage(), "Error General", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jLabel200MouseClicked
 
