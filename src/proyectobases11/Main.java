@@ -261,6 +261,8 @@ public class Main extends javax.swing.JFrame {
         jLabel183 = new javax.swing.JLabel();
         namec9 = new javax.swing.JTextField();
         jLabel204 = new javax.swing.JLabel();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
         DelC = new javax.swing.JDialog();
         jPanel34 = new javax.swing.JPanel();
         jPanel35 = new javax.swing.JPanel();
@@ -2305,7 +2307,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(jPanel33Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel175, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(519, Short.MAX_VALUE))
+                .addContainerGap(659, Short.MAX_VALUE))
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2315,7 +2317,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(15, 15, 15))
         );
 
-        jPanel32.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 760, 80));
+        jPanel32.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 900, 80));
 
         addCliente2.setBackground(new java.awt.Color(22, 56, 242));
         addCliente2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -2324,6 +2326,11 @@ public class Main extends javax.swing.JFrame {
         jLabel176.setFont(new java.awt.Font("Eras Demi ITC", 0, 24)); // NOI18N
         jLabel176.setForeground(new java.awt.Color(255, 255, 255));
         jLabel176.setText("Modificar Cliente");
+        jLabel176.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel176MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout addCliente2Layout = new javax.swing.GroupLayout(addCliente2);
         addCliente2.setLayout(addCliente2Layout);
@@ -2342,7 +2349,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        jPanel32.add(addCliente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, 260, 50));
+        jPanel32.add(addCliente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 510, 260, 50));
 
         jLabel177.setBackground(new java.awt.Color(255, 255, 255));
         jLabel177.setFont(new java.awt.Font("Eras Demi ITC", 0, 14)); // NOI18N
@@ -2379,17 +2386,27 @@ public class Main extends javax.swing.JFrame {
         jLabel204.setText("Username");
         jPanel32.add(jLabel204, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane15.setViewportView(jTable4);
+
+        jPanel32.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 440, 370));
+
         javax.swing.GroupLayout ModCLayout = new javax.swing.GroupLayout(ModC.getContentPane());
         ModC.getContentPane().setLayout(ModCLayout);
         ModCLayout.setHorizontalGroup(
             ModCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 662, Short.MAX_VALUE)
+            .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         ModCLayout.setVerticalGroup(
             ModCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ModCLayout.createSequentialGroup()
-                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE)
         );
 
         jPanel34.setBackground(new java.awt.Color(255, 255, 255));
@@ -5518,6 +5535,11 @@ public class Main extends javax.swing.JFrame {
         ModC.setModal(true);
         ModC.setLocationRelativeTo(this);
         ModC.setVisible(true);
+        try {
+            this.cnx.fJTable1(jTable4, "get_clientes");
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_ModClienteMouseClicked
 
     private void DelClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DelClienteMouseClicked
@@ -6021,6 +6043,11 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_p_vendidopaisMouseClicked
 
+    private void jLabel176MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel176MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jLabel176MouseClicked
+
     private void creaciondeCliente() {
 
     }
@@ -6415,6 +6442,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -6439,6 +6467,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
